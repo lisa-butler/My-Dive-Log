@@ -1,4 +1,6 @@
-django added as framework for management of development
+django added as framework for management of development INSTALLED DHJANGO LIBRARIES
+installed psychopg2 postgresql
+installed cloudinary to manage image
 
 Added Material Design Bootstrap for the design elements
 
