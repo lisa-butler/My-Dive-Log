@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from log.views import say_hello 
+from log.views import get_logpage 
 # this allows us to use the say hello function inside the urls file
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', say_hello, name='hello') #so this takes the url the user will type in, the function from views and the name#
+    path('', get_logpage, name='get_logpage'),
+    # path('hello/', say_hello, name='hello') #so this takes the url the user will type in, the function from views and the name#
 ]
