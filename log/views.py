@@ -10,4 +10,8 @@ def get_logpage(request):
         'items': items
     }
     return render(request, "log/logpage.html", context)
+ 
+
+def log_a_dive(request):
+    return render(request, "log/logadive.html")
 
