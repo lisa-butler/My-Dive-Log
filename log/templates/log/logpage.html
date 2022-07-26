@@ -8,6 +8,19 @@
 </head>
 <body>
     <h1>My Dive Log</h1>
-    
+
+    <table>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.date }}</td>
+                <td>{{ item.location }}</td>
+                <td>{{ item.depth }}</td>
+                <td>{{ item.time }}</td>
+                <td>{{ item.buddy }}</td>
+                <td>{{ item.note }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
 </body>
 </html>
