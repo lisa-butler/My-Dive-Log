@@ -11,42 +11,6 @@
     <form method ='POST', action="log_a_dive">
         {% csrf_token %}
         {{ form.as_p }}
-        <!-- <div>
-            <p>
-                <label for = "id_date">Date: </label>
-                <input type="text" id="id_date" name="item_date"/> 
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for = "id_location">Location: </label>
-                <input type="text" id="id_location" name="item_location"/> 
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for = "id_depth">Depth: </label>
-                <input type="text" id="id_depth" name="item_depth"/> 
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for = "id_time">Time: </label>
-                <input type="text" id="id_time" name="item_time"/> 
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for = "id_buddy">Buddy: </label>
-                <input type="text" id="id_buddy" name="item_buddy"/> 
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for = "id_note">Note: </label>
-                <input type="text" id="id_note" name="item_note"/> 
-            </p>
-        </div> -->
         <div>
             <p>
                 <button>Log My Dive</button>
