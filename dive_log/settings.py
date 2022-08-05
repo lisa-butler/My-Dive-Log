@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8=cb$dz!qv!0u2uwnymy(bpnlm#522k0l3$-%7gp7v+2*$0u=t'
+SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-8=cb$dz!qv!0u2uwnymy(bpnlm#522k0l3$-%7gp7v+2*$0u=t')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-dive-log.herokuapp.com']
+ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'dive_log.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://wlxqgtgjqwnklt:7f96ec867f9dc0d4bf18a3034ec296b7543a1d773290912a78ed2f26f39cf7d6@ec2-34-253-119-24.eu-west-1.compute.amazonaws.com:5432/d6ga14me8q11bu')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 
 }
 
