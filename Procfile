@@ -1,1 +1,1 @@
-web: gunicorn dive_log.wisgi:application
+web: gunicorn dive_log.wsgi
