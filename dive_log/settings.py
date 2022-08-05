@@ -73,8 +73,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dive_log.wsgi.application'
 
 
-Database
-https://docs.djangoproject.com/en/3.2/ref/settings/databases
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/databases
 
 
 # DATABASES = {
