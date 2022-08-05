@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-8=cb$dz!qv!0u2uwnymy(bpnlm#522k0l3$-%7gp7v+2*$0u=t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['git.heroku.com/my-dive-log.git']
 
 
 # Application definition
