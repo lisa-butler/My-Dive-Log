@@ -12,6 +12,8 @@ def get_logpage(request):
     }
     return render(request, "log/logpage.html", context)
 
+def index(request):
+    return render(request, 'log/index.html')
 
 def log_a_dive(request):
     if request.method == 'POST':
