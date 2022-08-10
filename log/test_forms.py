@@ -9,13 +9,11 @@ class TestItemForm(TestCase):
         self.assertIn('date', form.errors.keys())
         self.assertEqual(form.errors['date'][0], 'This field is required.')
 
-    
     def test_item_location_is_required(self):
         form = ItemForm({'location': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('location', form.errors.keys())
         self.assertEqual(form.errors['location'][0], 'This field is required.')
-
 
     def test_item_depth_is_required(self):
         form = ItemForm({'depth': ''})
@@ -23,13 +21,11 @@ class TestItemForm(TestCase):
         self.assertIn('depth', form.errors.keys())
         self.assertEqual(form.errors['depth'][0], 'This field is required.')
 
-
     def test_item_time_is_required(self):
         form = ItemForm({'time': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('time', form.errors.keys())
         self.assertEqual(form.errors['time'][0], 'This field is required.')
-
 
     def test_item_buddy_is_required(self):
         form = ItemForm({'buddy': ''})

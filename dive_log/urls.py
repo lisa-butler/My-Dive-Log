@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
 from log import views
 
 # this allows us to use the say hello function inside the urls file
@@ -27,4 +29,4 @@ urlpatterns = [
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('delete/<item_id>', views.delete_item, name='delete'),
     path('get_home', views.get_home, name="get_home"),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
