@@ -26,5 +26,5 @@ urlpatterns = [
     path('log_a_dive', views.log_a_dive, name='log_a_dive'),
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('delete/<item_id>', views.delete_item, name='delete'),
-
+    path('get_home', views.get_home, name="get_home"),
 ]

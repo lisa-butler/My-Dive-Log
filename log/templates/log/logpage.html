@@ -4,13 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
 </head>
 <body>
+  <article class="container text-center">
     <h1>My Dive Log</h1>
+
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="get_home">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="log_a_dive">Log a Dive</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="get_logs">My Dive Log</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Map?</a>
+            </li>
+          </ul>
+        </nav>
+    <div class="media">
+      <img src="/images/icon.jpg" class="rounded-circle" height=100 width=100>
+    </div>  
     <h2>Logged Dives</h2>
 
-    <table>
+    <!-- <table>
         {% for item in items %}
             <tr>
                 <td>{{ item.date }}</td>
@@ -31,7 +58,49 @@
                 </td>    
             </tr>
         {% endfor %}
-    </table>
+    </table> -->
+
+    <div class="container mt-3">        
+        <table class="table-borderless">
+            
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Depth</th>
+              <th>Time</th>
+              <th>Buddy</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in items %}
+            <tr>
+              <td>{{ item.date }}</td>
+              <td>{{ item.location }}</td>
+              <td>{{ item.depth }}</td>
+              <td>{{ item.time }}</td>
+              <td>{{ item.buddy }}</td>
+              <td>{{ item.note }}</td>
+            </tr>
+            <!-- <tr>
+              <td>{{ item.date }}</td>
+              <td>{{ item.location }}</td>
+              <td>{{ item.depth }}</td>
+              <td>{{ item.time }}</td>
+              <td>{{ item.buddy }}</td>
+            </tr>
+            <tr>
+                <td>{{ item.date }}</td>
+                <td>{{ item.location }}</td>
+                <td>{{ item.depth }}</td>
+                <td>{{ item.time }}</td>
+                <td>{{ item.buddy }}</td>
+            </tr> -->
+          </tbody>
+          {% endfor %}
+        </table>
+      </div>
   
     <a href = "/log_a_dive">
         <button>Log a Dive</button>
