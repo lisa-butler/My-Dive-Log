@@ -13,7 +13,8 @@
     <title>My Dive Log</title>
 </head>
 <body>
-    <h1>Log a Dive</h1>
+    <h1>My Dive Log</h1>
+    <h2>Log a Dive</h2>
     <form method ='POST', action="log_a_dive">
         {% csrf_token %}
         {{ form.as_p }}

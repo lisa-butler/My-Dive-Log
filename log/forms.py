@@ -9,4 +9,8 @@ class ItemForm(forms.ModelForm):
         widgets = {
             'date' : forms.TextInput(attrs={'class': 'form-control'}),
             'location' : forms.TextInput(attrs={'class': 'form-control'}),
+            'depth' : forms.TextInput(attrs={'class': 'form-control'}),
+            'time' : forms.TextInput(attrs={'class': 'form-control'}),
+            'buddy' : forms.TextInput(attrs={'class': 'form-control'}),
+            'note' : forms.TextInput(attrs={'class': 'form-control'}),
         }

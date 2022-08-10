@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from log import views
+
 # this allows us to use the say hello function inside the urls file
 
 urlpatterns = [
