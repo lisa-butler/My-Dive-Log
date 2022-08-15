@@ -1,6 +1,8 @@
 h1 {
-    color: hotpink;
-    font-size: x-large;
+    color: teal;
+    font-size: 300%;
+    padding-top: 1em;
+    margin: 0;
 }
 
 .navbar-nav {
@@ -9,6 +11,32 @@ h1 {
 }
 
 .form-inputs {
-    max-width: 21em;
+    max-width: 26em;
     display: inline-block;
+    
 }
+
+/*Header image*/
+#circle-container {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: 5px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#circle-cover-image {
+    background: url(images/icon.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#center-about {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
