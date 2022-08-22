@@ -29,5 +29,6 @@ urlpatterns = [
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('delete/<item_id>', views.delete_item, name='delete'),
     path('get_home', views.get_home, name="get_home"),
-    path('accounts/', include('allauth.urls'))
+    path('accounts/', include('allauth.urls')),
+    # path('accounts/login/', views.get_login, name='get_login')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

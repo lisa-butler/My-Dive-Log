@@ -51,3 +51,6 @@ def delete_item(request, item_id):
 def get_home(request):
     return render(request, 'log/index.html')
 
+
+def get_login(request):
+    return render(request, 'registration/account/login.html')
