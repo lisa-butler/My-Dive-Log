@@ -10,10 +10,10 @@ def get_logpage(request):
     context = {
         'items': items
     }
-    return render(request, "log/logpage.html", context)
+    return render(request, "logpage.html", context)
 
 def index(request):
-    return render(request, 'log/index.html')
+    return render(request, 'index.html')
 
 def log_a_dive(request):
     if request.method == 'POST':
@@ -25,7 +25,7 @@ def log_a_dive(request):
     context = {
         'form': form
     }
-    return render(request, "log/logadive.html", context)
+    return render(request, "logadive.html", context)
 
 
 def edit_item(request, item_id):
@@ -39,7 +39,7 @@ def edit_item(request, item_id):
     context = {
         'form': form
     }
-    return render(request, 'log/edit_item.html', context)
+    return render(request, 'edit_item.html', context)
 
 
 def delete_item(request, item_id):
@@ -49,5 +49,5 @@ def delete_item(request, item_id):
 
 
 def get_home(request):
-    return render(request, 'log/index.html')
+    return render(request, 'index.html')
 
