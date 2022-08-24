@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
@@ -10,10 +12,11 @@ def get_logpage(request):
     context = {
         'items': items
     }
-    return render(request, "logpage.html", context)
+    return render(request, "templates/logpage.html", context)
 
 def index(request):
     return render(request, 'index.html')
+
 
 def log_a_dive(request):
     if request.method == 'POST':

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div>
+      <strong>Menu:</strong>
+
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    <ul class="sidebar-nav">
+
+      …
+  
+     {% if user.is_authenticated %}
+       <li>User: {{ user.get_username }}</li>
+       <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+     {% else %}
+       <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+     {% endif %}
+    </ul>
+    {% endblock %}
+  </body>
+</html>
