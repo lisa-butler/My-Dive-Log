@@ -12,7 +12,7 @@ def get_logpage(request):
     context = {
         'items': items
     }
-    return render(request, "templates/logpage.html", context)
+    return render(request, "logpage.html", context)
     
 
 def index(request):
