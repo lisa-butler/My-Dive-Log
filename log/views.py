@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-
+@login_required
 def get_logpage(request):
     items = Item.objects.all()
     context = {
@@ -18,7 +18,7 @@ def get_logpage(request):
 def index(request):
     return render(request, 'index.html')
 
-
+@login_required
 def log_a_dive(request):
     if request.method == 'POST':
         form = ItemForm(request.POST)
