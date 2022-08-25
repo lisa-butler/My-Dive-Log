@@ -16,7 +16,16 @@
 
   </head>
   <body>
-    <h1 id="title">My Dive Log</h1>
+    <article class="container text-center">
+      <h1 id="title">My Dive Log</h1>
+    
+
+    <div id="center-about">
+      <div id="circle-container">
+        <div id="circle-cover-image"></div>
+      </div>
+    </div>
+     
     {% block body %}
 
     {% if messages %}
@@ -29,26 +38,22 @@
       </ul>
     </div>
     {% endif %}
-
-    <div>
-      <strong>Menu:</strong>
-
-    </div>
     {% block content %}
     {% endblock %}
     {% endblock %}
     {% block extra_body %}
     <ul class="sidebar-nav">
+    {% endblock %}
 
-      …
-  
-     {% if user.is_authenticated %}
+    <!--THIS WILL NEED TO BE ADDED INTO THE INDEX.HTML ETC-->
+     <!-- {% if user.is_authenticated %}
        <li>User: {{ user.get_username }}</li>
        <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
      {% else %}
        <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
      {% endif %}
-    </ul>
-    {% endblock %}
+    </ul> -->
+   
+  </article>  
   </body>
 </html>

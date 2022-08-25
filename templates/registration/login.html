@@ -1,7 +1,11 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-
+<section class="callout text-center my-5">
+  <h2>A simpler way to log your dives on the go!</h2>
+  <p>Login below to record, view and edit your dives </p>
+</section>
+<article class="'container text-center">
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
@@ -14,10 +18,11 @@
       <p>Please login to see this page.</p>
     {% endif %}
   {% endif %}
-
+  <div class = 'card text text-center container mt-3'>
+    <div class = 'card-body'>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <table>
+    <table> 
       <tr>
         <td>{{ form.username.label_tag }}</td>
         <td>{{ form.username }}</td>
@@ -31,7 +36,7 @@
     <input type="hidden" name="next" value="{{ next }}">
   </form>
 
-  {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-
+    </div>
+  </div>
+</article>
 {% endblock %}
