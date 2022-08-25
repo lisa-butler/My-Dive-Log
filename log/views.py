@@ -55,3 +55,6 @@ def delete_item(request, item_id):
 def get_home(request):
     return render(request, 'index.html')
 
+
+def logout(request):
+    return render(request, 'logout.html')
