@@ -29,6 +29,7 @@
           <th>Time</th>
           <th>Buddy</th>
           <th>Note</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -40,6 +41,7 @@
           <td>{{ item.time }}</td>
           <td>{{ item.buddy }}</td>
           <td>{{ item.note }}</td>
+          <td><a class="nav-link" href="/edit/{{ item.id }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
         </tr>
       </tbody>
         {% endfor %}
