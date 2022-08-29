@@ -44,7 +44,12 @@ h1 {
     justify-content: center;
     text-align: center;
     width: 50%;
-    height: 12em;
+    height: 12em;   
+}
 
-    
+.login_funct {
+    list-style: none;
+    text-align: right;
+ 
+
 }
