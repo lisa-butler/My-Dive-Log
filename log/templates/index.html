@@ -8,7 +8,7 @@
       <li class="login_funct">User: {{ user.get_username }}</li>
       <li class="login_funct"><a href="{% url 'logout'%}">Logout</a></li>
   {% else %}
-      <li class="login_funct"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+      <li class="login_funct"><a href="{% url 'login'%}">Login</a></li>
       <li class="login_funct"><a href="{% url 'register_user'%}">Register</a></li>
   {% endif %}
       </ul>
