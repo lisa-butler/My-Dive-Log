@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from .forms import RegisterUserForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
 
 
 # Create your views here.
@@ -58,3 +63,21 @@ def get_home(request):
 
 def logout(request):
     return render(request, 'logout.html')
+
+
+def register_user(request):
+    if request.method == "POST":
+        form = RegisterUserForm(request.POST)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password1']
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        messages.success(request, ("Registration Successful!"))
+        return redirect('get_home')
+    else:
+        form = RegisterUserForm()
+    return render(request, 'registration/register_user.html', {
+        'form':form,
+        })
