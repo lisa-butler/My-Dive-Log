@@ -29,11 +29,12 @@ urlpatterns = [
     path('get_logs/', views.get_logpage, name='get_logpage'),
     path('log_a_dive/', views.log_a_dive, name='log_a_dive'),
     path('edit/<item_id>', views.edit_item, name='edit'),
-    path('delete/<item_id>', views.delete_item, name='delete'),
+    path('delete_item/<item_id>', views.delete_item, name='delete_item'),
     path('get_home/', views.get_home, name="get_home"),
     path('logout/', views.logout, name='logout'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('register_user', views.register_user, name='register_user'),
+   
     
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
