@@ -53,6 +53,7 @@ def edit_item(request, item_id):
     
 def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
+    # if request.method == "POST":
     item.delete()
     return redirect('get_logpage')
 
@@ -66,18 +67,22 @@ def logout(request):
 
 
 def register_user(request):
+    
+    form = RegisterUserForm(request.POST)
+
+    if request.method == "GET":
+        return render(request, 'registration/register_user.html', {
+            'form': form,
+            })
+
     if request.method == "POST":
-        form = RegisterUserForm(request.POST)
-    if form.is_valid():
-        form.save()
-        username = form.cleaned_data['username']
-        password = form.cleaned_data['password1']
-        user = authenticate(username=username, password=password)
-        login(request, user)
-        messages.success(request, ("Registration Successful!"))
-        return redirect('get_home')
-    else:
-        form = RegisterUserForm()
-    return render(request, 'registration/register_user.html', {
-        'form':form,
-        })
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, ("Registration Successful!"))
+            return redirect('get_home')
+        else:
+            form = RegisterUserForm()
