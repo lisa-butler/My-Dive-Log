@@ -86,3 +86,6 @@ def register_user(request):
             return redirect('get_home')
         else:
             form = RegisterUserForm()
+
+def diving_officer_home(request):
+    return render(request, 'diving_officer.html')            
