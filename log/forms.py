@@ -9,8 +9,9 @@ from django.contrib.auth.forms import UserCreationForm
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ['date', 'location', 'depth', 'time', 'buddy', 'note']
+        fields = ['username', 'date', 'location', 'depth', 'time', 'buddy', 'note']
         widgets = {
+            'username': forms.HiddenInput(),
             'date': forms.TextInput(attrs={'class': 'form-inputs'}),
             'location': forms.TextInput(attrs={'class': 'form-inputs'}),
             'depth': forms.TextInput(attrs={'class': 'form-inputs'}),

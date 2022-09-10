@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.contrib import messages
 
 
@@ -28,7 +29,11 @@ def log_a_dive(request):
     if request.method == 'POST':
         form = ItemForm(request.POST)
         if form.is_valid():
-            form.save()
+            cleaned_form = form.clean()
+            cleaned_form['username'] = request.user
+            new_form = ItemForm(cleaned_form)
+            # request.user.DiveLog_set.Create(name=n)
+            new_form.save()
             return redirect('get_logpage')
     form = ItemForm()
     context = {

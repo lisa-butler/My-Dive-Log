@@ -20,6 +20,7 @@
     <table class="table-borderless table-hover table">
       <thead>
         <tr>
+          <th>Username</th>
           <th>Date</th>
           <th>Location</th>
           <th>Depth</th>
@@ -33,6 +34,7 @@
       <tbody>
         {% for item in items %}
         <tr>
+          <td>{{ item.username }}</td>
           <td>{{ item.date }}</td>
           <td>{{ item.location }}</td>
           <td>{{ item.depth }}</td>
