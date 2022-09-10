@@ -14,11 +14,19 @@ from django.contrib import messages
 
 @login_required
 def get_logpage(request):
-    items = Item.objects.all()
+    items = Item.objects.filter(username=request.user)
     context = {
         'items': items
     }
     return render(request, "logpage.html", context)
+
+# @login_required
+# def get_club_logs(request):
+#     items = Item.objects.all()
+#     context = {
+#         'items': items
+#     }
+#     return render(request, "logpage.html", context)    
     
 
 def index(request):
