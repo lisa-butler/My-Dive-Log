@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Item
+from .models import Item, Info
 from .forms import ItemForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -104,3 +104,16 @@ def register_user(request):
 
 def diving_officer_home(request):
     return render(request, 'diving_officer.html')
+
+
+def club_members(request):
+    all_users = User.objects.values()
+    print(all_users)
+
+    context = {
+        'allUsers': all_users
+    }
+
+    return render(request, 'club_members.html', context)
+    
+   

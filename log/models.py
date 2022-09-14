@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import Group, User, Permission
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 
@@ -24,3 +25,13 @@ class Item(models.Model):
 
     def __str__(self):
         return self.date
+
+
+class Info(models.Model):
+    User = get_user_model()
+    users = User.objects.all()
+
+    def __str__(self):
+        return self.username
+  
+
