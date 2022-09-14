@@ -1,108 +1,129 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Portfolio-Project 4
+## My Dive Log
+### This web application was built as portfolio project four in the diploma in software development at the code institute. The web application is intended to be used as a digital log for dives. Divers use paper log books to record their depths, times, locations etc of dives and Diving officers (dive organisers) also use a paper copy to keep track of divers, their buddies and their dive details. This application aims to provide a digital resource to tackle this.
 
-Welcome lisa-butler,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Lisa Butler
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+## **[Live Site] (https://lisa-butler.github.io/Portfolio-Project1/index.html)**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+------------------------------------------------------------------
 
-A blue button should appear to click: _Make Public_,
+## **[Repository](https://github.com/lisa-butler/portfolio-project1)**
 
-Another blue button should appear to click: _Open Browser_.
+------------------------------------------------------------------
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Contnets
 
-A blue button should appear to click: _Make Public_,
+ 1. [User Experience](#ux)
+ 2. [Website Features](#features)   
+ 3. [Technology Used](#tech) 
+ 4. [Testing](#testing)  
+ 5. [Bugs](#bugs)  
+ 6. [Deployment](#deploy)
+ 7. [Credits](#credits)
+ 8. [Content](#content)  
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+ ![Home Page](assets/images/readme-images/picture1.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## User Experience 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<a name="ux"></a>
+### **Pre project planning** 
 
-------
+I decided to create this dive log for my project as a digital dive log is not something that is avalible yet but is something that many people would find very useful. I have had this idea for a while so i have enjoyed seeing it coming together. 
+Pre project planning involved developing user stories, wireframe mock ups, logic flow diagrams and researching some basic styling ideas. 
+I also researched the software stack to use for this specific project. As it is Django based i was tied to using Django and Python, however, I looked into using React and various alternatives for Bootstrap.
 
-## Release History
+**Strategy:**
+Determining the best approach meant investigating the needs of the potential users. This included the needs of the divers logging and reviewing their dives and the diving officers reviewing club logs and club members.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**User stories:**
+As a diver:
+I want to be able to log into an account so that my dives are password protected.
+I want to be able to log a dive, including depth, time, buddy, location etc.
+I want to be able to make a note when logging a dive.
+I want to be able to edit my logged dives.
+I want to be able to delete my logged dives.
+I want to be able to review my logged dives in a dive log page.
+I want my data to be stored in a database so that it is avalible each time i log into the system.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+As a diving officer:
+I want to be able to log and review my own dives as a diver.
+I want to be able to view all dives logged by members in my club.
+I want to be able to view all of my club members.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**Scope:**
+The web application should have a clear and consistent layout including navigation and login, logout functionality.
+The web application should be accessible on all devices for divers to log their dives on the go.
+The web application should have a navigation bar that is self explanitory.
+Logging a dive should be as straight forward and quick as possible.
+Reviewing logged dives should be simple and easy to view.
+Logging in and out should be staright forward and easy to do.
+Viewing club logs should be able to be done sepertely from personal logs so that the diving officer can just have one account.
+The application should be easy to use and require preamble to log a dive quickly after returing from the water.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### **Structural planning**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+In order for the web applicationto achieve these goals it was decided to have three pages avalible for the diver; the Home page, Dive log page and Log a dive page. For the diving officer a fourth page labelled Diving officer was avalible, this consisted of two options, to view the club logs and to view the club members.
+There was also a login/logout/register functionality at the top of each page and pages such as dive logs and log a dive required login to acess.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**Home:**
+This page should contain an overview of what the purpose of the site is.
+The navigation bar should be clear and easy to access.
+A prompt to take the diver to the log a dive section and a prompt to view thir log should be present to speed up navigation.
+Login and logout functionality should be present with a register option for non logged in users.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+**Log a dive:**
+This page should contain the same theme as the other pages.
+There should be a navigtion bar with the active tag indicated somehow.
+The logging functionality should be straightforward and fairly unbounded so that the user can input information in a way that suits them, ie can record two dive buddies if needed, can record depth as 30m or 30 meters or 60 foot etc.
+Logging should be quick and effortless for on the go logging.
+Hitting log at the bottom of the logging page should take the diver too their logged idves.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**My logs:**
+This page should contain the same theme as the other pages.
+This page should display all of the divers logged dives specific to them.
+Content fileds from their logged dives such as buddy, depth etc should be visible.
+The option to edit or delete these dives should exist.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+**Diving officer:**
+This page should contain the same theme as the other pages.
+This page should provide the diving officer with the options to view the club logs or to view the club members.
+The club logs hsould contain every dive logged by members of this club with their username visible.
+The members section should show all members in the club.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+**Wireframes:**
+A wireframe was done for each page of the application before progressing into developing it.
+The basic plan for the application was to keep it as uncluttered and minimalistic as possible while providing the required functionality. As the mean age of divers is generally older, it was intended that the application be as intuitive as possible.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Wire frame of home page](assets/images/readme-images/wireframe.jpg)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Style**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Background: It was decided to stick with a very basic and modern theme of a white background with content kept neat and centrally placed. This benefitted accessibility as the elderly population in diving who would not be as tech savvy, generally, would have a better chance of navigating the application.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**Color:** 
+The white background was chosen as it enabled the content to be very legible and to stand out for the user, making the site more navigatable.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The colors eventually selected for use were;
 
-------
+* White #FFF -used for the background.
+* Grey #D3D3D3 -used for hover over functions and detailing.
+* Teal #008080 -used for heading, sub-headings and buttons.
+* Black #000 -used for text as black on white is widely known as the most legible combination of colors.
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+![Colors in use](assets/images/readme-images/picture4.jpg)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+**Fonts:**
+The font selected was based on what was clear and easy to read as well as feeling like it was suited for a diving-based theme. 
+The font chosen was;
+	-Sans-Serif
+The focus of this font being to provide the information in a non-distracting manner that was viable for the visually impaired user or someone trying to use the site on a mobile device.
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+------------------------------------------------------------------

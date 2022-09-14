@@ -34,7 +34,8 @@ urlpatterns = [
     path('logout/', views.logout, name='logout'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('register_user', views.register_user, name='register_user'),
-    path('diving_officer_home/', views.diving_officer_home, name='diving_officer_home')
+    path('diving_officer_home/', views.diving_officer_home, name='diving_officer_home'),
+    path('get_club_logs/', views.get_club_logs, name='get_club_logs')
    
     
 

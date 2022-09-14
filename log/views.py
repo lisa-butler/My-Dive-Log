@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import UserCreationForm
 from .forms import RegisterUserForm
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group, AbstractUser, Permission
 from django.contrib import messages
 
 
@@ -20,13 +20,13 @@ def get_logpage(request):
     }
     return render(request, "logpage.html", context)
 
-# @login_required
-# def get_club_logs(request):
-#     items = Item.objects.all()
-#     context = {
-#         'items': items
-#     }
-#     return render(request, "logpage.html", context)    
+@login_required
+def get_club_logs(request):
+    items = Item.objects.all()
+    context = {
+        'items': items
+    }
+    return render(request, "club_logpage.html", context)    
     
 
 def index(request):
@@ -100,5 +100,44 @@ def register_user(request):
         else:
             form = RegisterUserForm()
 
+
 def diving_officer_home(request):
-    return render(request, 'diving_officer.html')            
+    return render(request, 'diving_officer.html')      
+
+
+# @permission_required('diving_officer.can_view')      
+
+
+
+
+
+# def show_do_view(request):
+#     do_view = ''
+#     if request.groups == 'Diving_Officer':
+#         do_view = RegisterUserForm(request.POST)             
+
+
+# def group_required(Diving_Officer):
+#     """Requires user membership in at least one of the groups passed in."""
+#     def in_groups(user):
+#         if user.groups.filter(name='Diving_Officer').exists():
+#             print('---working---')
+
+#         else:
+#             print('---not working---')
+     
+
+#     return user_passes_test(in_groups, login_url='403')
+
+
+# @group_required('Diving_Officer')
+# def diving_officer_home(request):
+#     return render(request, 'diving_officer.html')  
+
+    #    if user.is_authenticated:
+    #         print('------1------', user.groups)
+    #         if (user.groups.filter(name__in=Diving_Officer)):
+    #             print('-----2-----')
+    #             return True
+    #     return False
+
