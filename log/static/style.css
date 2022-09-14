@@ -50,6 +50,15 @@ h1 {
 .login_funct {
     list-style: none;
     text-align: right;
- 
 
+}
+
+.errorlist {
+    list-style: none;
+    display: none;
+}
+
+ul {
+    list-style: none;
+    
 }
