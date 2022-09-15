@@ -3,7 +3,7 @@ from .models import Item, Info
 from .forms import ItemForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterUserForm
+from .forms import NewUserForm
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
@@ -80,26 +80,38 @@ def logout(request):
     return render(request, 'logout.html')
 
 
-def register_user(request):
+def register_request(request):
+	if request.method == "POST":
+		form = NewUserForm(request.POST)
+		if form.is_valid():
+			user = form.save()
+			login(request, user)
+			messages.success(request, "Registration successful.")
+			return redirect("get_home")
+		messages.error(request, "Unsuccessful registration. Invalid information.")
+	form = NewUserForm()
+	return render (request=request, template_name="registration/register_user.html", context={"register_form":form})
+
+# def register_user(request):
     
-    form = RegisterUserForm(request.POST)
+#     form = RegisterUserForm(request.POST)
 
-    if request.method == "GET":
-        return render(request, 'registration/register_user.html', {
-            'form': form,
-            })
+#     if request.method == "GET":
+#         return render(request, 'registration/register_user.html', {
+#             'form': form,
+#             })
 
-    if request.method == "POST":
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            user = authenticate(username=username, password=password)
-            login(request, user)
-            messages.success(request, ("Registration Successful!"))
-            return redirect('get_home')
-        else:
-            form = RegisterUserForm()
+#     if request.method == "POST":
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data['username']
+#             password = form.cleaned_data['password1']
+#             user = authenticate(username=username, password=password)
+#             login(request, user)
+#             messages.success(request, ("Registration Successful!"))
+#             return redirect('get_home')
+#         else:
+#             form = RegisterUserForm()
 
 
 def diving_officer_home(request):
