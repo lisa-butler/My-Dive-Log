@@ -25,27 +25,38 @@
     <h2>A simpler way to log your dives on the go!</h2>
       <p>Record, view and edit your dives </p>
   </section>
-  <div class="row">
+  <div class="card-box">
+    <div class="row">
+      <div class="card">
+      <div class="col-sm order-1 my-5 card-body">
+        <h3>Log a dive</h3>
+          <p>Get started by logging a dive</p>
+          <a href = "/log_a_dive">
+            <button class="grey-button">Log a Dive</button>
+          </a>
+      </div>
+    </div>
     <div class="card">
-    <div class="col-sm order-1 my-5 card-body">
-      <h3>Log a dive</h3>
-        <p>Get started by logging a dive</p>
-        <a href = "/log_a_dive">
-          <button>Log a Dive</button>
-        </a>
+      <div class="col-sm order-2 my-5 card-body">
+        <h3>View my Log</h3>
+          <p>View your previously logged dives in your personal log</p>
+          <a href = "/get_logs">
+            <button class="grey-button">My Dive Log</button>
+          </a>
+      </div>
+    </div>
     </div>
   </div>
-  <div class="card">
-    <div class="col-sm order-2 my-5 card-body">
-      <h3>View my Log</h3>
-        <p>View your previously logged dives in your personal log</p>
-        <a href = "/get_logs">
-          <button>My Dive Log</button>
-        </a>
+  <section>
+    <div class="hero-container">
+        <div id="hero-images">
+            <img src="../static/images/dusty4.jpeg" alt="Diver with Dolphin" class="hero">
+            <img src="../static/images/diver_ascending.jpg" alt="Diver surfacing" class="hero">
+            <img src="../static/images/jellyfish.jpeg" alt="Jellyfish underwater" class="hero">
+        </div>
     </div>
-  </div>
-  </div>
+  </section>
 
 
-    
+
 {% endblock %}

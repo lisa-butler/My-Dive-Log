@@ -3,15 +3,6 @@
 
 {% block content %}
 
-  {% if user.is_authenticated %}
-    <ul>
-      <li class="login_funct">User: {{ user.get_username }}</li>
-      <li class="login_funct"><a href="{% url 'logout'%}">Logout</a></li>
-  {% else %}
-      <li class="login_funct"><a href="{% url 'login'%}">Login</a></li>
-      <li class="login_funct"><a href="{% url 'register_user'%}">Register</a></li>
-  {% endif %}
-      </ul>
      
   <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
     <ul class="navbar-nav">

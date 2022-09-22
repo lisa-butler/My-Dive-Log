@@ -18,8 +18,7 @@
   </head>
   <body>
     <article class="container text-center">
-      <h1 id="title">My Dive Log</h1>
-    
+      <a class="nav-link" href="/get_home"><h1 id="title">My Dive Log</h1></a>
 
     <div id="center-about">
       <div id="circle-container">
@@ -27,14 +26,16 @@
       </div>
     </div>
     {% if user.is_authenticated %}
+    <div id="login_links" >
     <ul>
       <li class="login_funct">User: {{ user.get_username }}</li>
-      <li class="login_funct"><a href="{% url 'logout'%}">Logout</a></li>
+      <li class="login_funct"><a class="nav-link" href="{% url 'logout'%}">Logout</a></li>
   {% else %}
-      <li class="login_funct"><a href="{% url 'login'%}">Login</a></li>
-      <li class="login_funct"><a href="{% url 'register_user'%}">Register</a></li>
+      <li class="login_funct"><a class="nav-link" href="{% url 'login'%}">Login</a></li>
+      <li class="login_funct"><a class="nav-link" href="{% url 'register_user'%}">Register</a></li>
   {% endif %}
       </ul>
+    </div>
     {% block body %}
 
     {% if messages %}
@@ -54,13 +55,13 @@
     {% endblock %}
     <footer>
       <nav class="navbar navbar-light bg-light justify-content-center navbar-light my-5">
-        
+
         <span class="navbar-text">
           My Dive Log
         </span>
       </nav>
     </footer>
- 
-  </article>  
+
+  </article>
   </body>
 </html>

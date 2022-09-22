@@ -27,8 +27,8 @@ def get_club_logs(request):
     context = {
         'items': items
     }
-    return render(request, "club_logpage.html", context)    
-    
+    return render(request, "club_logpage.html", context)
+
 
 def index(request):
     return render(request, 'index.html')
@@ -64,7 +64,7 @@ def edit_item(request, item_id):
     }
     return render(request, 'edit_item.html', context)
 
-    
+
 def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     # if request.method == "POST":
@@ -81,37 +81,20 @@ def logout(request):
 
 
 def register_request(request):
-	if request.method == "POST":
-		form = NewUserForm(request.POST)
-		if form.is_valid():
-			user = form.save()
-			login(request, user)
-			messages.success(request, "Registration successful.")
-			return redirect("get_home")
-		messages.error(request, "Unsuccessful registration. Invalid information.")
-	form = NewUserForm()
-	return render (request=request, template_name="registration/register_user.html", context={"register_form":form})
+    currentForm = NewUserForm()
+    if request.method == "POST":
+        form = NewUserForm(request.POST)
+        currentForm = form
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, "Registration successful.")
+            return redirect("get_home")
+        # else:
+            # messages.error(request, form.errors.a())
+    form = NewUserForm()
+    return render (request=request, template_name="registration/register_user.html", context={"register_form":currentForm})
 
-# def register_user(request):
-    
-#     form = RegisterUserForm(request.POST)
-
-#     if request.method == "GET":
-#         return render(request, 'registration/register_user.html', {
-#             'form': form,
-#             })
-
-#     if request.method == "POST":
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data['username']
-#             password = form.cleaned_data['password1']
-#             user = authenticate(username=username, password=password)
-#             login(request, user)
-#             messages.success(request, ("Registration Successful!"))
-#             return redirect('get_home')
-#         else:
-#             form = RegisterUserForm()
 
 
 def diving_officer_home(request):
@@ -120,12 +103,24 @@ def diving_officer_home(request):
 
 def club_members(request):
     all_users = User.objects.values()
-    print(all_users)
 
     context = {
         'allUsers': all_users
     }
 
     return render(request, 'club_members.html', context)
-    
-   
+
+
+# def edit_member(request, user):
+#     user = get_object_or_404(user, id=user)
+#     if request.method == 'POST':
+#         form = NewUserForm(request.POST, instance=user)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('')
+#     form = NewUserForm(instance=user)
+#     context = {
+#         'form': form
+#     }
+#     return render(request, 'edit_member', context)
+

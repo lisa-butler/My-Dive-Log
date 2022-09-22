@@ -9,7 +9,7 @@ from django.contrib.auth import get_user_model
 class DiveLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="DiveLog", null=True)
     name = models.CharField(max_length=200)
-    
+
     def __str__(self):
         return self.name
 
@@ -33,5 +33,5 @@ class Info(models.Model):
 
     def __str__(self):
         return self.username
-  
+
 
