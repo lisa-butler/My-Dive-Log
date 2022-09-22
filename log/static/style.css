@@ -1,14 +1,14 @@
 #title {
     color: teal;
     font-size: 5vw;
-    padding-top: 1em;
+    padding-top: 0.5em;
     margin: 0;
     text-decoration: none !important;
     text-align: center;
 }
 
 .navbar-nav {
-    justify-content: space-around;
+    align-content: space-evenly;
 
 }
 
@@ -46,10 +46,12 @@
     justify-content: center;
     text-align: center;
     width: 50%;
-    height: 12em;
+
 }
+.card-body {
+    justify-content: center;
 
-
+}
 
 .errorlist {
     list-style: none;
@@ -65,14 +67,6 @@ ul {
     text-decoration: none;
 }
 
-.card {
-    padding: 10em;
-}
-
-.grey-button {
-    background-color: lightslategray;
-}
-
 #hero-images {
     clear: both;
     line-height: 0;
@@ -81,7 +75,6 @@ ul {
     height: 26vw;
     margin-right: 0px;
     display: flex;
-
 }
 
 .hero {
@@ -94,9 +87,8 @@ ul {
 /* Container holding the image and the text */
 .hero-container {
     position: relative;
-    margin-top: 6em;
+    margin-top: 1em;
 }
-
 
 /* Login functionality on top of display*/
 .login_funct {
@@ -126,3 +118,41 @@ ul {
     padding-top: 1em;
 }
 
+.textbox {
+    color: teal;
+}
+
+.intro {
+    color:teal;
+    font-size: 250%;
+}
+
+.infpara {
+    font-size: 100%;
+}
+
+#buttonbox {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#loggedin {
+    color: gray;
+    font-weight: 600;
+}
+
+#cardbox {
+    justify-content: right;
+    text-align: center;
+    margin-right: 0em;
+    background-color: rebeccapurple;
+}
+
+#delete_funct {
+    color: teal;
+}
+
+#divetable {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
