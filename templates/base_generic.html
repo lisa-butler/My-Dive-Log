@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <article class="container text-center">
+    <article class="container text-center article-el">
       <a class="nav-link" href="/get_home"><h1 id="title">My Dive Log</h1></a>
 
     <div id="center-about">
@@ -29,10 +29,10 @@
     <div id="login_links" >
     <ul>
       <li class="login_funct">User: {{ user.get_username }}</li>
-      <li class="login_funct"><a class="nav-link" href="{% url 'logout'%}">Logout</a></li>
+      <li class="login_funct"><a class="nav-link" id="login" href="{% url 'logout'%}">Logout</a></li>
   {% else %}
-      <li class="login_funct"><a class="nav-link" href="{% url 'login'%}">Login</a></li>
-      <li class="login_funct"><a class="nav-link" href="{% url 'register_user'%}">Register</a></li>
+      <li class="login_funct"><a class="nav-link" id="login" href="{% url 'login'%}">Login</a></li>
+      <li class="login_funct"><a class="nav-link" id="login" href="{% url 'register_user'%}">Register</a></li>
   {% endif %}
       </ul>
     </div>

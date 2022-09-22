@@ -1,9 +1,10 @@
 #title {
     color: teal;
-    font-size: 300%;
+    font-size: 5vw;
     padding-top: 1em;
     margin: 0;
     text-decoration: none !important;
+    text-align: center;
 }
 
 .navbar-nav {
@@ -19,12 +20,12 @@
 
 /*Header image*/
 #circle-container {
-    width: 150px;
-    height: 150px;
-    padding: 10px;
+    width: 12vw;
+    height: 12vw;
+    padding: 1vw;
     border-style: solid;
     border-color: darkgrey;
-    border-width: 5px;
+    border-width: 0.5vw;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -37,8 +38,8 @@
 }
 
 #center-about {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
 }
 
 .card {
@@ -48,12 +49,7 @@
     height: 12em;
 }
 
-.login_funct {
-    list-style: none;
-    text-align: right;
-    color: hotpink;
 
-}
 
 .errorlist {
     list-style: none;
@@ -82,17 +78,17 @@ ul {
     line-height: 0;
     column-gap: 0;
     width:100%;
-    height: 35vw;
+    height: 26vw;
     margin-right: 0px;
     display: flex;
+
 }
 
 .hero {
-    flex-direction: row;
-    width: 33.333%;
     margin: 0;
     padding: 0;
-    height: 35vw;
+    width: 33.33%;
+    margin-left: 0;
 }
 
 /* Container holding the image and the text */
@@ -100,3 +96,33 @@ ul {
     position: relative;
     margin-top: 6em;
 }
+
+
+/* Login functionality on top of display*/
+.login_funct {
+    list-style: none;
+    text-align: justify;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin: 0em;
+}
+
+#login {
+    font-weight: 600;
+    font-size: medium;
+    color: teal;
+    padding: 0.2em;
+}
+
+#login:visited {
+    color: gray;
+  }
+
+#login:hover {
+    color: #006699;
+  }
+
+#navbox {
+    padding-top: 1em;
+}
+
