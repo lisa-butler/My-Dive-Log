@@ -21,17 +21,20 @@
     </ul>
   </nav>
   <h2 class="intro">Log a Dive</h2>
-  <div class="card justify-content-center" id="cardbox">
-    <div class="card-body justify-content-center">
-      <form method ='POST', action="/log_a_dive/">
-        {% csrf_token %}
-        {{ form.as_p }}
-          <div>
-            <p>
-              <Button>Log my Dive</Button>
-            </p>
-          </div>
-      </form>
+  <div class = 'card text text-center container mt-3'>
+    <div class = 'card-body'>
+      <table class="log-table"></table>
+
+          <form method ='POST', action="/log_a_dive/">
+            {% csrf_token %}
+            {{ form.as_p }}
+              <div>
+                <p>
+                  <Button>Log my Dive</Button>
+                </p>
+              </div>
+          </form>
+      </table>
     </div>
   </div>
 

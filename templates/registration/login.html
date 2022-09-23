@@ -1,15 +1,24 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<section class="callout text-center my-5">
-  <h2>A simpler way to log your dives on the go!</h2>
-  <p>Login below to record, view and edit your dives </p>
+<section>
+  <div class="hero-container img-fluid">
+      <div id="hero-images">
+          <img src="../../static/images/dusty4.jpeg" alt="Diver with Dolphin" class="hero">
+          <img src="../../static/images/diver_ascending.jpg" alt="Diver surfacing" class="hero">
+          <img src="../../static/images/jellyfish.jpeg" alt="Jellyfish underwater" class="hero">
+      </div>
+  </div>
 </section>
-<article class="'container text-center">
+<section class="callout text-center my-5">
+  <h2 class="intro">A simpler way to log your dives on the go!</h2>
+  <p class="infpara">Login below to record, view and edit your dives </p>
+</section>
+<article class="container text-center">
   <p>
     <h3>Login</h3>
     <p>Dont have an account yet? <a href="{% url 'register_user'%}">Register here</a></li></p>
-    
+
   </p>
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
@@ -27,7 +36,7 @@
     <div class = 'card-body'>
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <table> 
+    <table class="table">
       <tr>
         <td>{{ form.username.label_tag }}</td>
         <td>{{ form.username }}</td>

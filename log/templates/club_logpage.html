@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-     
+
   <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -20,9 +20,9 @@
       {% endif %}
     </ul>
   </nav>
-  <h2>All dives logged by your club</h2>
-  <div class="container mt-3">        
-    <table class="table-borderless table-hover table">
+  <h2 class="intro">All dives logged by your club</h2>
+  <div class="container mt-3">
+    <table class="table-borderless table-hover table" id="divetable">
       <thead>
         <tr>
           <th>Username</th>
@@ -49,6 +49,6 @@
         {% endfor %}
     </table>
   </div>
-  
+
 
   {% endblock %}
