@@ -21,21 +21,22 @@
     </ul>
   </nav>
   <h2 class="intro">Log a Dive</h2>
-  <div class = 'card text text-center container mt-3'>
-    <div class = 'card-body'>
+  <div class = 'card text text-center container mt-3 box' id="input-card">
+    <div class = 'log-body'>
       <table class="log-table"></table>
 
           <form method ='POST', action="/log_a_dive/">
             {% csrf_token %}
             {{ form.as_p }}
-              <div>
-                <p>
-                  <Button>Log my Dive</Button>
-                </p>
-              </div>
-          </form>
-      </table>
     </div>
+    <div class="card-body">
+      <p>
+        <Button>Log my Dive</Button>
+      </p>
+    </div>
+          </form>
+
+
   </div>
 
 {% endblock %}

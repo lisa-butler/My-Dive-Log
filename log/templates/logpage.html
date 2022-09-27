@@ -21,6 +21,7 @@
     </ul>
   </nav>
   <h2 class="intro">Logged Dives</h2>
+  <div class = 'card text  container box'>
   <div class="container mt-3">
     <table class="table-borderless table-hover table" id="divetable">
       <thead>
@@ -53,9 +54,10 @@
         {% endfor %}
     </table>
   </div>
+  </div>
 
   <a href = "/log_a_dive">
-    <button>Log a Dive</button>
+    <button id="log_a_dive_btn">Log a Dive</button>
   </a>
 
   {% endblock %}
