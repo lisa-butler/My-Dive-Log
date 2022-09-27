@@ -237,8 +237,8 @@ footer {
     text-align: center;
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
 
 .social-networks > li {
@@ -249,5 +249,302 @@ footer {
     font-size: 160%;
     margin: 1%;
     padding: 5%;
-    color: #3a3a3a;
+    color: gray;
 }
+
+#login-card {
+    border: 0px !important;
+}
+
+
+#login-btn {
+    font-weight: 600;
+    color:gray;
+    border-color: gray;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+}
+
+#login-btn:hover {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.help-block > ul > li {
+    color: teal;
+}
+
+.btn-reg {
+    font-weight: 600;
+    background-color: teal;
+    color: white;
+    border-color: teal;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+    margin-bottom: 2em;
+    margin-top: 1em;
+
+}
+
+/*For medium screen sizes from 950px wide and down*/
+@media screen and (max-width: 950px) and (min-width: 800px) {
+
+        /*Header image*/
+    #circle-container {
+        width: 18vw;
+        height: 18vw;
+        padding: 1vw;
+        border-style: solid;
+        border-color: darkgrey;
+        border-width: 1vw;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    #circle-cover-image {
+        background: url(images/icon.jpg) no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    #center-about {
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+
+
+    #input-card {
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+
+    }
+
+    #divetable {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+
+    #md-box {
+        padding: 0.2em;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 100%;
+    }
+
+    .data {
+        font-size: 70%;
+    }
+
+    #box-square {
+        padding: 0%;
+    }
+
+    .article-el {
+        padding:0;
+
+    }
+
+}
+
+/*For medium to small screenn sizes 800px to 600px*/
+@media screen and (max-width: 800px) and (min-width: 600px) {
+
+    /*Header image*/
+    #circle-container {
+    width: 20vw;
+    height: 20vw;
+    padding: 1vw;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: 1vw;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+    #circle-cover-image {
+        background: url(images/icon.jpg) no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    #center-about {
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+
+
+    #input-card {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    #divetable {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
+
+    #md-box {
+        padding: 0em;
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 80%;
+    }
+
+    .data {
+        font-size: 70%;
+    }
+
+    #home-box {
+        width: 40%;
+    }
+
+    #box-square {
+        padding: 0%;
+        width: 100%;
+    }
+
+    .article-el {
+        padding:0;
+
+    }
+
+}
+
+/*For small screenn sizes 600px and down*/
+@media screen and (max-width: 600px) and (min-width: 300px) {
+
+
+    /*Header image*/
+    #circle-container {
+        width: 30vw;
+        height: 30vw;
+        padding: 1vw;
+        border-style: solid;
+        border-color: darkgrey;
+        border-width: 1vw;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    #circle-cover-image {
+        background: url(images/icon.jpg) no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    #center-about {
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+
+    #title {
+        color: teal;
+        font-size: 200%;
+        font-weight: 900;
+        padding-top: 0.5em;
+        margin: 0;
+        text-decoration: none !important;
+        text-align: center;
+    }
+
+
+    #login {
+        font-size: 70%;
+    }
+
+    #loggedin {
+        font-size: 70%;
+    }
+
+    .l-in-funct {
+        padding:0;
+    }
+
+    .intro {
+        color:teal;
+        font-size: 120%;
+        padding-bottom: 0.5em;
+        font-weight: 900;
+    }
+
+    #home-box {
+        width: 80%;
+    }
+
+    footer {
+        height: 3em;
+    }
+
+    .social-networks {
+        padding-left: 0px;
+        margin-top: 3em;
+        margin-bottom: 0.2em;
+    }
+
+    .social-networks > li {
+        display: inline;
+
+    }
+
+    .social-networks i {
+        font-size: 100%;
+        margin: 1%;
+        padding: 5%;
+        color: gray;
+    }
+
+    #input-card {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .form-inputs {
+        max-width: 60%;
+        border-width: 0.1em;
+        border-radius: 3px;
+        border-color: gray;
+    }
+
+    label {
+        font-weight:700;
+        color: gray;
+        margin: 0;
+
+
+    }
+
+    .log-body {
+        padding-right: 30%;
+    }
+
+    #box-square {
+        padding: 0%;
+        width: 100%;
+    }
+
+    #md-box {
+        padding: 0%;
+    }
+
+
+
+}
+
+
+
+
+

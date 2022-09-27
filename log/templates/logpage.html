@@ -21,34 +21,34 @@
     </ul>
   </nav>
   <h2 class="intro">Logged Dives</h2>
-  <div class = 'card text  container box'>
-  <div class="container mt-3">
+  <div class = 'card text  container box' id="box-square">
+  <div class="container mt-3" id="md-box">
     <table class="table-borderless table-hover table" id="divetable">
       <thead>
         <tr>
-          <th>Username</th>
-          <th>Date</th>
-          <th>Location</th>
-          <th>Depth</th>
-          <th>Time</th>
-          <th>Buddy</th>
-          <th>Note</th>
-          <th></th>
-          <th></th>
+          <th class="heading">Username</th>
+          <th class="heading">Date</th>
+          <th class="heading">Location</th>
+          <th class="heading">Depth</th>
+          <th class="heading">Time</th>
+          <th class="heading">Buddy</th>
+          <th class="heading">Note</th>
+          <th class="heading"></th>
+          <th class="heading"></th>
         </tr>
       </thead>
       <tbody>
         {% for item in items %}
         <tr>
-          <td>{{ item.username }}</td>
-          <td>{{ item.date }}</td>
-          <td>{{ item.location }}</td>
-          <td>{{ item.depth }}</td>
-          <td>{{ item.time }}</td>
-          <td>{{ item.buddy }}</td>
-          <td>{{ item.note }}</td>
-          <td><a id="delete_funct" href="/edit/{{ item.id }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
-          <td><a id="delete_funct" href="/delete_item/{{ item.id }}"><i class="fa-solid fa-trash-can"></i></a></td>
+          <td class="data">{{ item.username }}</td>
+          <td class="data">{{ item.date }}</td>
+          <td class="data">{{ item.location }}</td>
+          <td class="data">{{ item.depth }}</td>
+          <td class="data">{{ item.time }}</td>
+          <td class="data">{{ item.buddy }}</td>
+          <td class="data">{{ item.note }}</td>
+          <td class="data"><a id="delete_funct" href="/edit/{{ item.id }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+          <td class="data"><a id="delete_funct" href="/delete_item/{{ item.id }}"><i class="fa-solid fa-trash-can"></i></a></td>
         </tr>
       </tbody>
         {% endfor %}
