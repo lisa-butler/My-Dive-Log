@@ -523,8 +523,6 @@ footer {
         font-weight:700;
         color: gray;
         margin: 0;
-
-
     }
 
     .log-body {
@@ -541,8 +539,48 @@ footer {
     }
 
 
+    #input-card {
+
+        width: 100%;
+        padding: 0%;
+
+    }
+
+    .card-body {
+        padding: 0%;
+    }
+
+    label {
+        font-size: 80%;
+        /* padding-left: 2em;
+        padding-bottom: 0.5em; */
+    }
+
+    #login-card {
+        padding: 0.1em;
+        width: 100%;
+
+    }
+
+    input {
+        max-width: 60%;
+        font-size: 70%;
+
+    }
+
+    td.small-scr {
+       padding:0%
+
+
+
+    }
+
+
 
 }
+
+
+
 
 
 
