@@ -115,16 +115,12 @@ ul {
 #login {
     font-weight: 600;
     font-size: medium;
-    color: teal;
+    color: grey;
     padding: 0.2em;
 }
 
-#login:visited {
-    color: gray;
-  }
-
 #login:hover {
-    color: #006699;
+    color: teal;
   }
 
 #navbox {
