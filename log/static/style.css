@@ -20,6 +20,11 @@ body {
 
 }
 
+#date-input {
+    width: max-content;
+    height: 2em;
+
+}
 .form-inputs {
     max-width: 60%;
     border-width: 0.1em;
@@ -528,6 +533,16 @@ footer {
     #box-square {
         padding: 0%;
         width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+
+    #clublogscont {
+        padding: 0%;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     #md-box {
@@ -566,12 +581,23 @@ footer {
 
     td.small-scr {
        padding:0%
-
-
-
     }
 
+    .heading {
+        font-size: 70%;
+    }
 
+    .data {
+        font-size: 60%;
+    }
+
+    .diver-info {
+        font-size: 80%;
+    }
+
+    .diver-details {
+        font-size: 70%;
+    }
 
 }
 

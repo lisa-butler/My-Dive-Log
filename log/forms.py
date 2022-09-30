@@ -12,7 +12,7 @@ class ItemForm(forms.ModelForm):
         fields = ['username', 'date', 'location', 'depth', 'time', 'buddy', 'note']
         widgets = {
             'username': forms.HiddenInput(),
-            'date': forms.TextInput(attrs={'class': 'form-inputs'}),
+            'date': forms.DateInput(attrs={'class': 'form-inputs', 'type': 'date', 'id': 'date-input'}),
             'location': forms.TextInput(attrs={'class': 'form-inputs'}),
             'depth': forms.TextInput(attrs={'class': 'form-inputs'}),
             'time': forms.TextInput(attrs={'class': 'form-inputs'}),

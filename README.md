@@ -244,14 +244,14 @@ This page contains a registration form that the user fills out. The form will re
 
 **Further features I would implement:**
 
-If I was to get the opportunity to build this site again to become an actual live site, there are some changes that I would like to make.
+If I was to build this application again with the intentions of it being a live application, there are several additional features i would implement;
 
-* Dive sites: This is the page that I would like to make the most changes to. As there are many more than seven dive sites in Ireland, a continuous list would not be a very viable option. I would instead have a drop-down menu for each county and these links would take the user to separate pages with their own drop-down menus for each dive site.
-* The main dive sites page would have a map with clickable pins depicting the sites that would link the user to the site.
-* I would have a search option and the option to filter by depth, skill level, location etc.
-* I was also considering the option of having a “comments” section for each dive to allow divers to make suggestions and leave comments about specific sites.
-* Media: Media would be rearranged to allow for a write up about each image, ie. Location it was taken in, time of year, life that is shown etc. Videos would be the same.
-* Contact page: There is no back end to the contact page, so for now, hitting “send message” just links the user to a thank you page with a link back to the home page. If this became a live site the thank you would ideally self-direct back to the home page after a certain time frame has passed.
-* Other elements to change: A potential of having a user account option so that users could save dives they want to do, comment on d dives and possibly even a separate place to log dives.
+* Multiple Clubs: As the application is at present, it can cater for one individual club. I would 	like the option for the user to select their club from a dropdown when registering and to be alloted into this club grouping in the admin section. The DO from each club would then have access to only his club members dives.
+* Filtering the dive logs: As this is a basic project version of the application i havent input a method to filter the divers by date, year, site, buddy etc. These are things i would like to have if it was a live application.
+* Pagination of logs: Similarly, if the log became too full, scrolling through the logs would get a bit tedious and the page would become extremly long (a diver can log 100 or so dives in each year). So i would be implementing pagination after approximately 20 dives, allowing the diver to click through. Having a year and month subheading/seperation of the dives would also help to keep things neater.
+* User profile: I would like the option for the user to have a profile where they can see their total dives logged, most frequent buddy, average dive time, most frequent location etc. A general option to change their details, such as diver grade, email etc and to view their stats would greatly enhance the app.
+* Map: A map with pins of all of the divers dive locations and number of dives on it would really give a more interractive feel to the application.
+* Options to do buddy linking: Similar to the application Strava, i would like if the diver could log a dive and when he selects a certain diver as his buddy, it notifies the buddy that "X has logged a dive with you, add to your log?".
+* Diving officer can delete members: I would like the diving officer to have the power to delete a diver from their club members list if they are no longer active etc.
 
 ------------------------------------------------------------------

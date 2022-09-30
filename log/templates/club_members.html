@@ -21,27 +21,25 @@
     </ul>
   </nav>
   <h2 class="intro">Members of my Club</h2>
-  <div class = 'card text  container box'>
+  <div class = 'card text  container box' id="clublogscont">
   <div class="container mt-3">
     <table class="table-borderless table-hover table" id="divetable">
       <thead>
 
         <tr>
-          <th>Username</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <!-- <th></th>
-          <th></th> -->
+          <th class="diver-info">Username</th>
+          <th class="diver-info">First Name</th>
+          <th class="diver-info">Last Name</th>
+          <th class="diver-info">Email</th>
         </tr>
       </thead>
       <tbody>
         {% for user in allUsers %}
         <tr>
-          <td>{{ user.username }}</td>
-          <td>{{ user.first_name }}</td>
-          <td>{{ user.last_name }}</td>
-          <td>{{ user.email }}</td>
+          <td class="diver-details">{{ user.username }}</td>
+          <td class="diver-details">{{ user.first_name }}</td>
+          <td class="diver-details">{{ user.last_name }}</td>
+          <td class="diver-details">{{ user.email }}</td>
           <!-- <td><a href="/edit_member/{{ user }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
           <td><a id="delete_funct" href="/delete_item/{{ user.id }}"><i class="fa-solid fa-trash-can"></i></a></td> -->
         </tr>

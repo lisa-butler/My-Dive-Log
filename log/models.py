@@ -16,7 +16,7 @@ class DiveLog(models.Model):
 
 class Item(models.Model):
     username = models.CharField(max_length=50, default='No username')
-    date = models.CharField(max_length=50, null=False, blank=False)
+    date = models.DateField(max_length=50, null=False, blank=False)
     location = models.CharField(max_length=50, null=False, blank=False)
     depth = models.CharField(max_length=50, null=False, blank=False)
     time = models.CharField(max_length=50, null=False, blank=False)

@@ -23,7 +23,7 @@ def get_logpage(request):
 
 @login_required
 def get_club_logs(request):
-    items = Item.objects.all()
+    items = Item.objects.order_by('date').all()
     context = {
         'items': items
     }
