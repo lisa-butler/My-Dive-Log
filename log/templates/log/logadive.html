@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Log a Dive</h2>
+    <form method ='POST', action="log_a_dive">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <p>
+                <Button>Log my Dive</Button>
+            </p>
+        </div>
+    </form>
+{% endblock content %}  

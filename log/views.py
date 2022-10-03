@@ -124,3 +124,6 @@ def club_members(request):
 #     }
 #     return render(request, 'edit_member', context)
 
+
+def get_login(request):
+    return render(request, 'registration/account/login.html')

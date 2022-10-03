@@ -39,8 +39,8 @@ urlpatterns = [
     path('club_members/', views.club_members, name='club_members'),
     # path('edit_member/<user>', views.edit_member, name='edit_member'),
     # path('delete_member/<user_id>', views.delete_member, name='delete_member')
-   
-    
+
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
