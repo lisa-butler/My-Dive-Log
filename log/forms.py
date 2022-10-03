@@ -1,14 +1,18 @@
 from django import forms
-from .models import Item
-from allauth.account.forms import SignupForm
+from django.contrib.auth.models import User
+from .models import Item, Info
+from django.contrib.auth.forms import UserCreationForm
+
+
 
 
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ['date', 'location', 'depth', 'time', 'buddy', 'note']
+        fields = ['username', 'date', 'location', 'depth', 'time', 'buddy', 'note']
         widgets = {
-            'date': forms.TextInput(attrs={'class': 'form-inputs'}),
+            'username': forms.HiddenInput(),
+            'date': forms.DateInput(attrs={'class': 'form-inputs', 'type': 'date', 'id': 'date-input'}),
             'location': forms.TextInput(attrs={'class': 'form-inputs'}),
             'depth': forms.TextInput(attrs={'class': 'form-inputs'}),
             'time': forms.TextInput(attrs={'class': 'form-inputs'}),
@@ -18,27 +22,21 @@ class ItemForm(forms.ModelForm):
 
 
 
-class MyCustomSignupForm(SignupForm):
-    def __init__(self, *args, **kwargs):
-        super(MyCustomSignupForm, self).__init__(*args, **kwargs)
-        self.fields['organization'] = forms.CharField(required=True)
-    def save(self, request):
-        organization = self.cleaned_data.pop('organization')
-        ...
-        user = super(MyCustomSignupForm, self).save(request)
 
-# class CustomSignupForm(SignupForm):
-#     first_name = forms.CharField(max_length=12, label='First Name')
-#     last_name = forms.CharField(max_length=12, label='Last Name')
-#     email = forms.EmailField(max_length=20, label='Email')
-#     dive_club = forms.CharField(max_length=12, label='Dive Club')
-#     password = forms.CharField(max_length=12, label='Password')
+class NewUserForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
 
-#     def save(self, request):
-#         user = super(CustomSignupForm, self).save(request)
-#         user.fist_name = self.cleaned_data['first_name']
-#         user.last_name = self.cleaned_data['last_name']
-#         user.email = self.cleaned_data['email']
-#         user.password = self.cleaned_data['password']
-#         user.save()
-#         return user
+    class Meta:
+        model = User
+        fields = ("username", "email", "first_name", "last_name", "password1", "password2")
+
+    def save(self, commit=True):
+        user = super(NewUserForm, self).save(commit=False)
+        user.email = self.cleaned_data['email']
+        user.first_name = self.cleaned_data['first_name']
+        user.last_name = self.cleaned_data['last_name']
+        if commit:
+            user.save()
+        return user

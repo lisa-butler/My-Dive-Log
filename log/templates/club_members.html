@@ -1,0 +1,53 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/get_home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/log_a_dive">Log a Dive</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/get_logs">My Dive Log</a>
+      </li>
+      {% if user.is_staff %}
+      <li class="nav-item">
+        <a class="nav-link active" href="/diving_officer_home">Diving Officer</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  <h2 class="intro">Members of my Club</h2>
+  <div class = 'card text  container box' id="clublogscont">
+  <div class="container mt-3">
+    <table class="table-borderless table-hover table" id="divetable">
+      <thead>
+
+        <tr>
+          <th class="diver-info">Username</th>
+          <th class="diver-info">First Name</th>
+          <th class="diver-info">Last Name</th>
+          <th class="diver-info">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in allUsers %}
+        <tr>
+          <td class="diver-details">{{ user.username }}</td>
+          <td class="diver-details">{{ user.first_name }}</td>
+          <td class="diver-details">{{ user.last_name }}</td>
+          <td class="diver-details">{{ user.email }}</td>
+          <!-- <td><a href="/edit_member/{{ user }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+          <td><a id="delete_funct" href="/delete_item/{{ user.id }}"><i class="fa-solid fa-trash-can"></i></a></td> -->
+        </tr>
+      </tbody>
+        {% endfor %}
+    </table>
+  </div>
+  </div>
+
+
+  {% endblock %}

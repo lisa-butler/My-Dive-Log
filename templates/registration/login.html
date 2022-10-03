@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<section>
+  <div class="hero-container img-fluid">
+      <div id="hero-images">
+          <img src="../../static/images/dusty4.jpeg" alt="Diver with Dolphin" class="hero">
+          <img src="../../static/images/diver_ascending.jpg" alt="Diver surfacing" class="hero">
+          <img src="../../static/images/jellyfish.jpeg" alt="Jellyfish underwater" class="hero">
+      </div>
+  </div>
+</section>
+<section class="callout text-center my-5">
+  <h2 class="intro">A simpler way to log your dives on the go!</h2>
+  <p class="infpara">Login below to record, view and edit your dives </p>
+</section>
+<article class="container text-center">
+  <p>
+    <h3 class="textbox">Login</h3>
+    <p class="infpara">Dont have an account yet? <a href="{% url 'register_user'%}">Register here</a></li></p>
+
+  </p>
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+  <div class = 'card text text-center container mt-3 box' id="input-card">
+  <div class = 'card text text-center container mt-3' id="login-card">
+    <div class = 'card-body'>
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table class="table table-borderless">
+      <tr>
+        <td class="small-scr">{{ form.username.label_tag }}</td>
+        <td class="small-scr">{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td class="small-scr">{{ form.password.label_tag }}</td>
+        <td class="small-scr">{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login" id="login-btn">
+    <input type="hidden" name="next" value="{{ next }}">
+    </form>
+
+    </div>
+  </div>
+  </div>
+</article>
+{% endblock %}

@@ -7,13 +7,13 @@ class TestViews(TestCase):
     def test_get_logpage(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'log/logpage.html')
+        self.assertTemplateUsed(response, 'logpage.html')
 
 
     def test_get_log_a_dive(self):
         response = self.client.get('/log_a_dive')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'log/logadive.html')
+        self.assertTemplateUsed(response, 'logadive.html')
 
 
     def test_can_add_item(self):
@@ -33,4 +33,4 @@ class TestViews(TestCase):
         item = Item.objects.create(name='Test Log Item')
         response = self.client.get(f'/edit/{item.id}')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'log/edit_item.html')
+        self.assertTemplateUsed(response, 'edit_item.html')

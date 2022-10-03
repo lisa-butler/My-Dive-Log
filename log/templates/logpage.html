@@ -1,0 +1,63 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/get_home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/log_a_dive">Log a Dive</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/get_logs">My Dive Log</a>
+      </li>
+      {% if user.is_staff %}
+      <li class="nav-item">
+        <a class="nav-link" href="/diving_officer_home">Diving Officer</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  <h2 class="intro">Logged Dives</h2>
+  <div class = 'card text  container box' id="box-square">
+  <div class="container mt-3" id="md-box">
+    <table class="table-borderless table-hover table" id="divetable">
+      <thead>
+        <tr>
+          <th class="heading">Username</th>
+          <th class="heading">Date</th>
+          <th class="heading">Location</th>
+          <th class="heading">Depth</th>
+          <th class="heading">Time</th>
+          <th class="heading">Buddy</th>
+          <th class="heading">Note</th>
+          <th class="heading"></th>
+          <th class="heading"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td class="data">{{ item.username }}</td>
+          <td class="data">{{ item.date }}</td>
+          <td class="data">{{ item.location }}</td>
+          <td class="data">{{ item.depth }}</td>
+          <td class="data">{{ item.time }}</td>
+          <td class="data">{{ item.buddy }}</td>
+          <td class="data">{{ item.note }}</td>
+          <td class="data"><a id="delete_funct" href="/edit/{{ item.id }}"><i class="fa-solid fa-pen-to-square"></i></a></td>
+          <td class="data"><a id="delete_funct" href="/delete_item/{{ item.id }}"><i class="fa-solid fa-trash-can"></i></a></td>
+        </tr>
+      </tbody>
+        {% endfor %}
+    </table>
+  </div>
+  </div>
+
+  <a href = "/log_a_dive">
+    <button id="log_a_dive_btn">Log a Dive</button>
+  </a>
+
+  {% endblock %}
