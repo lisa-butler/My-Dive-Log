@@ -15,7 +15,7 @@ from django.shortcuts import redirect
 
 @login_required
 def get_logpage(request):
-    items = Item.objects.filter(username=request.user)
+    items = Item.objects.filter(username=request.user).order_by('-date')
     context = {
         'items': items
     }
@@ -23,7 +23,7 @@ def get_logpage(request):
 
 @login_required
 def get_club_logs(request):
-    items = Item.objects.order_by('date').all()
+    items = Item.objects.all().order_by('-date')
     context = {
         'items': items
     }
