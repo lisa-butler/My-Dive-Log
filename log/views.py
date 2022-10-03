@@ -43,6 +43,7 @@ def log_a_dive(request):
             new_form = ItemForm(cleaned_form)
             # request.user.DiveLog_set.Create(name=n)
             new_form.save()
+            messages.success(request, "Dive logged!")
             return redirect('get_logpage')
     form = ItemForm()
     context = {
@@ -50,13 +51,18 @@ def log_a_dive(request):
     }
     return render(request, "logadive.html", context)
 
-
+@login_required
 def edit_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
+    user = get_object_or_404(User, username=request.user)
+    if item.username != user:
+        messages.error(request, "This is not your dive")
+        return redirect('index')
     if request.method == 'POST':
         form = ItemForm(request.POST, instance=item)
         if form.is_valid():
             form.save()
+            messages.success(request, "Dive updated")
             return redirect('get_logpage')
     form = ItemForm(instance=item)
     context = {
@@ -64,11 +70,15 @@ def edit_item(request, item_id):
     }
     return render(request, 'edit_item.html', context)
 
-
+@login_required
 def delete_item(request, item_id):
     item = get_object_or_404(Item, id=item_id)
-    # if request.method == "POST":
+    user = get_object_or_404(User, username=request.user)
+    if item.username != user:
+        messages.error(request, "This is not your dive")
+        return redirect('index')
     item.delete()
+    messages.success(request, "Dive Deleted!")
     return redirect('get_logpage')
 
 
