@@ -288,8 +288,36 @@ footer {
 
 }
 
-/*For medium screen sizes from 950px wide and down*/
-@media screen and (max-width: 950px) and (min-width: 800px) {
+/*For medium to small screenn sizes 1200px to 990px*/
+@media screen and (max-width: 1200px) and (min-width: 990px) {
+
+    #date-input {
+        width: max-content;
+        height: 2em;
+        min-width: 13.8em;
+        text-align: center;
+    }
+
+    .log-body {
+        text-align: right;
+        padding-right: 28%;
+        padding-top: 2em;
+
+    }
+
+    #input-card {
+        justify-content: center;
+        text-align: center;
+        width: 70%;
+
+    }
+}
+
+
+
+
+/*For medium screen sizes from 990px wide to 800px wide*/
+@media screen and (max-width: 990px) and (min-width: 800px) {
 
         /*Header image*/
     #circle-container {
@@ -349,6 +377,13 @@ footer {
     .article-el {
         padding:0;
 
+    }
+
+    #date-input {
+        width: max-content;
+        height: 2em;
+        min-width: 12.8em;
+        text-align: center;
     }
 
 }
@@ -600,6 +635,13 @@ footer {
         font-size: 70%;
     }
 
+    #date-input {
+        width: max-content;
+        height: 2em;
+        max-width: 14em;
+        text-align: center;
+        width: auto;
+    }
 }
 
 
