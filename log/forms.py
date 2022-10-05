@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Item, Info
 from django.contrib.auth.forms import UserCreationForm
-
+from .models import Item
 
 
 
@@ -18,8 +17,6 @@ class ItemForm(forms.ModelForm):
             'buddy': forms.TextInput(attrs={'class': 'form-inputs'}),
             'note': forms.TextInput(attrs={'class': 'form-inputs'})
         }
-
-
 
 
 class NewUserForm(UserCreationForm):

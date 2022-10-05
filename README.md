@@ -255,3 +255,51 @@ If I was to build this application again with the intentions of it being a live 
 * Diving officer can delete members: I would like the diving officer to have the power to delete a diver from their club members list if they are no longer active etc.
 
 ------------------------------------------------------------------
+
+------------------------------------------------------------------
+
+## Technologies Used
+
+<a name="tech"></a>
+
+### **Languages**
+
+The languages used in this project were;
+
+* HTML5
+* CSS3
+* Python3
+
+### **Frameworks/Libraries/programs:**
+
+* Django 3.2.15: The main framework used for developing the functionality of the application.
+* Bootstrap 4: Used for style and fucntion of the application.
+* Django Contrib Auth: Used for the login functionality and user registration within the app.
+* Django Crispy Forms: Used for customising forms created in the app.
+* Whitenoise: Used to serve static image files for the decoration of the application.
+* Postgres: Functions as the primary database for this application, to store users data.
+* Gunicorn: Used to serve WSGI apps, such as this, especially when there are multiple instances of said app running at one time.
+* Font Awesome: Used for icons in the social media bar and the edit/delete functions.
+* Google Fonts: Ubuntu was used for the main content of the project, obtained through Google Fonts.
+* GitHub: Used to plan, build, preview and edit the application.
+
+
+### **Other Requirements:**
+
+* asgiref
+* backports.zoneinfo
+* dj-database-url
+* django-allauth
+* django-braces
+* oauthlib
+* psycopg2
+* PyJWT
+* python3-openid
+* pytz
+* requests-oauthlib
+* sqlparse
+
+
+
+
+------------------------------------------------------------------
