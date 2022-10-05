@@ -35,17 +35,16 @@ def index(request):
 
 @login_required
 def log_a_dive(request):
+    form = ItemForm(request.POST or None)
     if request.method == 'POST':
-        form = ItemForm(request.POST)
         if form.is_valid():
-            cleaned_form = form.clean()
-            cleaned_form['username'] = request.user
-            new_form = ItemForm(cleaned_form)
-            # request.user.DiveLog_set.Create(name=n)
-            new_form.save()
+            form.instance.username = request.user
+            form.save()
             messages.success(request, "Dive logged!")
             return redirect('get_logpage')
-    form = ItemForm()
+        else:
+            messages.error(request, "An Error Occurred")
+
     context = {
         'form': form
     }

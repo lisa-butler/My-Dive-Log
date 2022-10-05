@@ -636,11 +636,11 @@ footer {
     }
 
     #date-input {
-        width: max-content;
+
         height: 2em;
-        max-width: 14em;
+        min-width: 0;
         text-align: center;
-        width: auto;
+        width: 60%;
     }
 }
 

@@ -15,7 +15,6 @@ class DiveLog(models.Model):
 
 
 class Item(models.Model):
-    # username = models.CharField(max_length=50, default='No username')
     username = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateField(max_length=50, null=False, blank=False)
     location = models.CharField(max_length=50, null=False, blank=False)
@@ -24,7 +23,7 @@ class Item(models.Model):
     buddy = models.CharField(max_length=50, null=False, blank=False)
     note = models.TextField(max_length=50, null=True, blank=True)
 
-    def __str__(self):
+    def __repr__(self):
         return self.date
 
 
