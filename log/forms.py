@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Item
 
 
-
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
