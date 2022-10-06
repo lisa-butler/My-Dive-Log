@@ -256,7 +256,6 @@ If I was to build this application again with the intentions of it being a live 
 
 ------------------------------------------------------------------
 
-------------------------------------------------------------------
 
 ## Technologies Used
 
@@ -302,3 +301,99 @@ The languages used in this project were;
 
 
 ------------------------------------------------------------------
+
+## Troubleshooting and testing
+
+<a name="test"></a>
+
+### **Troubleshooting:**
+Troubleshooting was quite varied on this project as it involved quite a wide range of different technologies. Initially the biggest issue i ran into was with settign up the authentication and registration system. I spent quite a few weeks trying to get allauth to work before abandoning it in favour of django contrib auth, something that had much more extensive documentation avalible for it and was ultimately much simpler to use.
+I opened a new branch to attempt this new authentication system on and when i merged the branches, later on, it took some time to work through the merge conflicts, remove unneeded duplicates, folders and code.
+There were countless other small errors solved throughout the development of this application.
+
+**Error Handling and input control:**
+
+### **Testing:**
+
+**Code Validation:**
+
+**Browser Compatibility:**
+
+**Accessibility Testing:**
+
+**Performance Testing:**
+
+**User Story Testing:**
+
+User:
+
+*As a diver I can make a log input of my dive details (depth, time, location) so that I have this recorded in my dive log.*
+
+&#9745; Django.contrib.auth installed which has sign in/ sign up and register functionality.
+
+*As a diver I can edit my logged dives so that I can alter details where needed*
+
+&#9745; An option to edit the dive avalible and a html page that facilitates this avalible. Dive updated and redirects to log.
+
+*As a diver I can delete a dive from my log so that I have full control over what dives i have in my log.*
+
+&#9745; A delete option is avalible for each dive, user can delete their own dives.
+
+*As a Diver I can view my logged dives so that I have access to a log of my dives*
+
+&#9745; Html page for viewing the users own logged dives avalible. Dives in order of most recent for convienience.
+
+*As a user I can create and account so that I can use the app to log and view my dives.*
+
+&#9745; Full login and register functionality avalible with login required for viewing logs and logging dives.
+
+Diving officer:
+
+*As a diving officer I can view all dives logged by members of my club so that i can have a digital log for my club*
+
+&#9745; Diving officer (who has staff status) has access to a means to view all divers logs in order of most recent for convienience.
+
+*As a diving officer I can view a list of my club members on the system so that i know who is contributing and in the event that it is extensive, i can see all of my members.*
+
+&#9745; Diving officer who has staff status can view a list of members, complete with their email and first and last names.
+
+*As a diving officer I can log my own dives within the same profile so that i dont need to have two profiles and i can keep my own log.*
+
+&#9745; The diving officer has access to all of the same functionality as the other users, the diving officer section of the application is for users with staff status only (the diving officer only) and is a seperate section of the application.
+
+
+
+
+**Manual Testing:**
+
+Testing links and forms:
+
+* Navigation links are working and bring the user to the correct page. &#9745;
+* The home page Log a Dive” and "View my Log" links are working and take user to the correct pages. &#9745;
+* The social media links all work and take users to the correct social media. &#9745;
+* The title of the page "My Dive Log" works as a link to return the user to home. &#9745;
+* Login and logout functionality works correctly. &#9745;
+* The registration form has error handling built in so the user must make the correct inputs.&#9745;
+* The forms all redirect appropriately. &#9745;
+
+
+Testing security elements:
+
+* When the user is not logged in they cannot access log a dive or my dive log. &#9745;
+* The user can only view their own logged dives (unless they have staff status). &#9745;
+* The user can edit and delete their logged dives. &#9745;
+* The user cannot edit or delete anyone elses dives. &#9745;
+* The diving officer (who has staff status) can view all users logged dives. &#9745;
+* The diving officer (who has staff status) can view all users details. &#9745;
+
+Testing other elements:
+
+* The navigation bar shows which page is active correctly. &#9745;
+* Images when used loaded correctly. &#9745;
+* Navigation of the application is intuitive. &#9745;
+* When the user is logged in their username shows at the top of the screen. &#9745;
+* When the user is not logged in the option to login or register shows. &#9745;
+
+
+------------------------------------------------------------------
+
