@@ -2,15 +2,7 @@
 
 {% block content %}
 
-  {% if user.is_authenticated %}
-    <ul>
-      <li>User: {{ user.get_username }}</li>
-      <li><a href="{% url 'logout'%}">Logout</a></li>
-  {% else %}
-      <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
-  {% endif %}
-      </ul>
-     
+
   <nav class="navbar navbar-expand-sm bg-light justify-content-center navbar-light my-5">
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -25,14 +17,19 @@
     </ul>
   </nav>
 <body>
-    <h1>My Dive Log</h1>
-    <h2>Edit a Logged Dive</h2>
-    <form method ='POST'>
-        {% csrf_token %}
-        {{ form.as_p }}
-            <p>
-                <button>Update Dive</button>
-            </p>
-          
-    </form>
+    <h2 class="intro">Edit a Logged Dive</h2>
+    <div class = 'card text text-center container mt-3 box' id="input-card">
+      <div class = 'log-body'>
+        <form method ='POST'>
+          {% csrf_token %}
+          {{ form.as_p }}
+      </div>
+      <div class="card-body">
+        <p>
+          <Button>Update Dive</Button>
+        </p>
+      </div>
+        </form>
+
+    </div>
     {% endblock %}
