@@ -397,3 +397,62 @@ Testing other elements:
 
 ------------------------------------------------------------------
 
+## Bugs
+
+<a name="bugs"></a>
+
+### **Bugs Found:**
+
+The login functionality at the top of the screen was appearing twice on the home page, i discovered this was due to a duplicate of the index.html document existing after i merged the branch i was working on to the main. Deleting this extra file fixed the issue.
+
+The delete function was redirecting back to the log but wasnt removing the dive that was supposed to be deleted. This was remedied by taking the delet function out of the delete.html and putting it next to the dive on the log page.
+
+After merging the two branches i spent several hours trying to work out why i wasnt redirected to logged_out.html when i clicked logout but was instead redirected back to the home page. Ultimately i ended up looking through the setting.py from before the merge and found two lines that were now in my settings.py that werent there before i merged the files, when logout was redirecting as desired. The lines were LOGIN = '/' and LOGOUT = '/', these were an override that directed the user back to the home page when login/logout was clicked. After deleting them the app performed as desired.
+
+There was an interesting bug that meant when i filled in a dive log form and clicked log my dive, the form would refresh but the page would not redirect, the dive was logged when i manually navigated to my logged dives. This was solved with some expert help from my mentor.
+
+There are hopefully no bugs present in the application now, if you happen to come across any, please email me at l.butler1993@gmail.com.
+------------------------------------------------------------------
+## Deployment
+
+<a name="deploy"></a>
+
+Deployment of the program was done via Heroku, the process is below;
+
+* When you have a Heroku account and have signed in there is a white button with purple outline on the top right hand side of the main dashboard labelled new. This button opens a dropdown within which we select 'Create new app'. This will redirect us to a page where we select a name for our app as well as inputting our region. We the click 'Create app'.
+* On the page you are redirected to, there is a navigation bar along the top, under the name of the app. Click on the final tab labelled 'Settings'. In this page, scroll down past App information to the section labelled 'Config Vars'. Click on the button to 'Reveal config vars'. Postgres and a secret key will need to be added to this. Once the config vars are saved they should be added to the env.py file, which should be added to the .gitignore file so that the config vars are not publically avalible.
+* When you scroll up to the top of the page again, you can select the 'Deploy' tab from the same nav bar we found settings on. On this page select Github as youR deployment method. When you click on Github you will be able to search for the repo you want to use. You can then select to deploy manually or automatically. Selecting automatically will have the app deploy each new update.
+* You can then make a push in your Gitpod workspace and your app should deploy.
+
+To manually deploy;
+
+	* Enter 'heroku login -i' in the terminal and enter your own login details.
+	* The enter 'heroku apps' in the terminal.
+	* Followed by the command: heroku git:remote -a My-Dive-Log.
+	* Then push to both the main branch and Heroku using the terminal commands: 'git push origin main' and 'git push heroku main' respectively.
+	* The app should now be avalible on Heroku.
+------------------------------------------------------------------
+
+## Credits and Acknowledgements
+
+<a name="credits"></a>
+
+### **Credits:**
+* Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/) and the Code Institutes workthrough projct and course content.
+* Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
+
+
+### **Acknowledgements:**
+* My program coordinator Kasia for contiuned support and advice throughout.
+* My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
+* My mentor Seun Owonikoko for advising on the development stages of my project.
+
+------------------------------------------------------------------
+
+## Content and resources
+
+<a name="content"></a>
+
+* All content was written by the developer as part of an academic exercise for the Code Institute.
+
+
