@@ -72,6 +72,10 @@ The application should be easy to use and require as few clicks as possible to l
 In order for the web application to achieve these goals it was decided to have three pages avalible for the diver; the Home page, Dive log page and Log a dive page. For the diving officer a fourth page labelled Diving officer was avalible, this consisted of two options, to view the club logs and to view the club members.
 There was also a login/logout/register functionality at the top of each page and pages such as dive logs and log a dive required login to acess.
 
+**Home page wireframe utilising Balsamiq**
+
+![Home page wireframe using Balsamiq](log/static/images/balsamiq-home.jpg)
+
 **Home:**
 This page should contain an overview of what the purpose of the site is.
 The navigation bar should be clear and easy to access.
@@ -86,12 +90,20 @@ Logging should be quick and effortless for on the go logging.
 Hitting log at the bottom of the logging page should take the diver to their logged dives.
 This page should not be avalible to users who are not logged in.
 
+**Log a Dive page wireframe utilising Balsamiq**
+
+![Log a Dive page wireframe using Balsamiq](log/static/images/balsamiq-logadive.jpg)
+
 **My logs:**
 This page should contain the same theme as the other pages.
 This page should display all of the divers logged dives specific to them.
 Content fileds from their logged dives such as buddy, depth etc should be visible.
 The option to edit or delete these dives should exist.
 This page should not be avalible to users who are not logged in.
+
+**Logs page wireframe utilising Balsamiq**
+
+![Logs page wireframe using Balsamiq](log/static/images/balsamiq-log.jpg)
 
 **Diving officer:**
 This page should contain the same theme as the other pages.
@@ -108,6 +120,10 @@ Clicking login should redirect to the home page when the login is sucessful.
 There should be an option for those who are not yet registered to click register now and be redirected to the register page.
 Failed login should indicate that the login failed and return the login page again.
 
+**Login page wireframe utilising Balsamiq**
+
+![Login page wireframe using Balsamiq](log/static/images/balsamiq-login.jpg)
+
 Register:
 This page should have the same styling as the rest of the application.
 It should include a registration form requesting; email, username, first and last names and a password to be entered and confrimed.
@@ -120,14 +136,17 @@ Selecting logout should redirect the user to a page that cofirms they are logged
 This page should have the same styling as the rest of the application.
 There should be a prompt for the user to login again.
 
+**Logged out page wireframe utilising Balsamiq**
+
+![Logged out page wireframe using Balsamiq](log/static/images/balsamiq-loggedout.jpg)
+
 
 
 **Wireframes:**
-A wireframe was done for each page of the application before progressing into developing it.
+A wireframe was done for each page of the application using Balsamiq before progressing into developing it.
 The basic plan for the application was to keep it as uncluttered and minimalistic as possible while providing the required functionality. As the mean age of divers is generally older, it was intended that the application be as intuitive as possible.
 Wireframing helped with deciding on a general look of the application and how it would be navigated by a user, leading to changes in design happening before any coding began.
 
-![Wire frame of home page](assets/images/readme-images/wireframe.jpg)
 
 ### **Style**
 
@@ -438,14 +457,16 @@ To manually deploy;
 <a name="credits"></a>
 
 ### **Credits:**
-* Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/) and the Code Institutes workthrough projct and course content.
-* Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
+
+* Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/).
+* It was also take from the Code Institutes walkthrough projcts "Hello Django" and course content.
+* Design ideas were taken from Bootstrap (https://getbootstrap.com/) as well as general web searches using Google.
 
 
 ### **Acknowledgements:**
 * My program coordinator Kasia for contiuned support and advice throughout.
 * My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
-* My mentor Seun Owonikoko for advising on the development stages of my project.
+* My mentor Tim Nelson for going above and beyond to ensure i was presenting my best work and that i understood each concept we discussed.
 
 ------------------------------------------------------------------
 
