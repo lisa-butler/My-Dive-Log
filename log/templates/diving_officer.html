@@ -1,5 +1,6 @@
 
 {% extends "base_generic.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -28,26 +29,33 @@
     <h2 class="intro">A simpler way to manage your dive clubs logs!</h2>
       <p class="infpara">View divers and ther logged dives below</p>
   </section>
-  <div class="row">
-    <div class = 'card text  container box' id="home-box">
-    <div class="col-sm order-1 my-5">
-      <h3 class="textbox">View divers logs</h3>
-        <p class="infpara">Explore all dives logged by divers within your club</p>
-        <a href = "/get_club_logs">
-          <button>View Logs</button>
+
+  <div class="row d-flex justify-content-around">
+    <div class='card box col-12 col-md-4 mb-3 py-5'>
+        <h3 class="textbox">View Divers Logs</h3>
+        <p class="infpara">View all dives logged by divers in your club!</p>
+        <a href="{% url 'get_club_logs' %}" class="btn btn-secondary button">
+          View Club Logs
         </a>
     </div>
-    </div>
-    <div class = 'card text  container box' id="home-box">
-    <div class="col-sm order-2 my-5">
-      <h3 class="textbox">View my club members</h3>
-        <p class="infpara">View and edit members in my diving club</p>
-        <a href = "/club_members">
-          <button>Club Members</button>
+    <div class='card box col-12 col-md-4 mb-3 py-5'>
+        <h3 class="textbox">View my Club Members</h3>
+        <p class="infpara">View all members of my diving club!</p>
+        <a href="{% url 'club_members' %}" class="btn btn-secondary button">
+          View Club Members
         </a>
     </div>
   </div>
-  </div>
+
+  <section>
+    <div class="hero-container img-fluid">
+        <div id="hero-images">
+            <img src="{% static 'images/dusty4.jpeg' %}" alt="Diver with Dolphin" class="hero">
+            <img src="{% static 'images/diver_ascending.jpg' %}" alt="Diver surfacing" class="hero">
+            <img src="{% static 'images/jellyfish.jpeg' %}" alt="Jellyfish underwater" class="hero">
+        </div>
+    </div>
+  </section>
 
 
 {% endblock %}

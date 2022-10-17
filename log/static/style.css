@@ -215,15 +215,22 @@ label {
     margin-bottom: 2em;
 }
 
-button {
+/* button {
     font-weight: 600;
     color:gray;
     border-color: gray;
     border-radius: 3px;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+} */
+
+.button {
+    background-color: gray;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+
 }
 
-button:hover {
+.button:hover {
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
 }
 
