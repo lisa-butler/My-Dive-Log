@@ -6,7 +6,7 @@
 ### Lisa Butler
 
 
-## **[Live Site] (https://lisa-butler.github.io/Portfolio-Project1/index.html)**
+## **[Live Site](https://lisa-butler.github.io/Portfolio-Project1/index.html)**
 
 
 ------------------------------------------------------------------
@@ -340,9 +340,11 @@ There were countless other small errors solved throughout the development of thi
 
 **Accessibility Testing:**
 
-**Performance Testing:**
+<!-- **Performance Testing:** -->
 
 **User Story Testing:**
+
+Responsivness!!
 
 User:
 

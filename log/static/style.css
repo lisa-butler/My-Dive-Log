@@ -60,7 +60,7 @@ body {
 #input-card {
     justify-content: center;
     text-align: center;
-    width: 50%;
+    /* width: 50%; */
 
 }
 
@@ -191,8 +191,8 @@ label {
 }
 
 .log-body {
-    text-align: right;
-    padding-right: 28%;
+    /* text-align: right;
+    padding-right: 28%; */
     padding-top: 2em;
 
 }
@@ -299,8 +299,6 @@ footer {
     }
 
     .log-body {
-        text-align: right;
-        padding-right: 28%;
         padding-top: 2em;
 
     }
@@ -562,10 +560,6 @@ footer {
         margin: 0;
     }
 
-    .log-body {
-        padding-right: 30%;
-    }
-
     #box-square {
         padding: 0%;
         width: 100%;
@@ -635,13 +629,7 @@ footer {
         font-size: 70%;
     }
 
-    #date-input {
 
-        height: 2em;
-        min-width: 0;
-        text-align: center;
-        width: 60%;
-    }
 }
 
 

@@ -12,7 +12,7 @@ app_name = "diveLog"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('get_logs/', views.get_logpage, name='get_logpage'),
+    path('get_logs/', views.get_logpage, name='get_logs'),
     path('log_a_dive/', views.log_a_dive, name='log_a_dive'),
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('delete_item/<item_id>', views.delete_item, name='delete_item'),
