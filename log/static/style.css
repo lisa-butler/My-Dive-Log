@@ -206,9 +206,10 @@ label {
     box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
 }
 
-#log_a_dive_btn {
+/* #log_a_dive_btn {
     margin-top: 2em;
-}
+    margin-bottom: 2em;
+} */
 
 #home-box {
     width: 30%;
@@ -227,6 +228,8 @@ label {
     background-color: gray;
     border-radius: 3px;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 
 }
 
@@ -635,7 +638,6 @@ footer {
     .diver-details {
         font-size: 70%;
     }
-
 
 }
 
