@@ -49,9 +49,9 @@
           <td class="data">{{ item.time }}</td>
           <td class="data">{{ item.buddy }}</td>
           <td class="data">{{ item.note }}</td>
-          <td class="data"><a id="delete_funct" href="/edit/{{ item.id }}"><i class="fa-solid fa-pen-to-square"></i></a>
+          <td class="data"><a id="delete_funct" href="{% url 'edit_item' item.id %}"><i class="fa-solid fa-pen-to-square"></i></a>
           </td>
-          <td class="data"><a id="delete_funct" href="/delete_item/{{ item.id }}"><i
+          <td class="data"><a id="delete_funct" href="{% url 'delete_item' item.id %}"><i
                 class="fa-solid fa-trash-can"></i></a></td>
         </tr>
       </tbody>

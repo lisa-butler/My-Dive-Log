@@ -5,17 +5,18 @@
 
 ### Lisa Butler
 
+------------------------------------------------------------------
 
-## **[Live Site](https://lisa-butler.github.io/Portfolio-Project1/index.html)**
+## View the live site here
+**[Live Site](https://my-dive-log.herokuapp.com/)**
 
+
+## View the Repository here
+**[Repository](https://github.com/lisa-butler/My-Dive-Log)**
 
 ------------------------------------------------------------------
 
-## **[Repository](https://github.com/lisa-butler/portfolio-project1)**
-
-------------------------------------------------------------------
-
-## Contnets
+## Contents
 
  1. [User Experience](#ux)
  2. [Application Features](#features)
@@ -340,11 +341,10 @@ There were countless other small errors solved throughout the development of thi
 
 **Accessibility Testing:**
 
-<!-- **Performance Testing:** -->
+**Responsivness:**
 
 **User Story Testing:**
 
-Responsivness!!
 
 User:
 

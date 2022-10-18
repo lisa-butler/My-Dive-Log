@@ -38,7 +38,7 @@ def log_a_dive(request):
             form.instance.username = request.user
             form.save()
             messages.success(request, "Dive logged!")
-            return redirect('get_logpage')
+            return redirect('get_logs')
         else:
             messages.error(request, "An Error Occurred")
 
@@ -60,7 +60,7 @@ def edit_item(request, item_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Dive updated")
-            return redirect('get_logpage')
+            return redirect('get_logs')
     form = ItemForm(instance=item)
     context = {
         'form': form
@@ -77,7 +77,7 @@ def delete_item(request, item_id):
         return redirect('index')
     item.delete()
     messages.success(request, "Dive Deleted!")
-    return redirect('get_logpage')
+    return redirect('get_logs')
 
 
 def get_home(request):
