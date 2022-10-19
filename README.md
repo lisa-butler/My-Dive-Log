@@ -353,16 +353,58 @@ There were countless other small errors solved throughout the development of thi
 
 **Code Validation:**
 
+HTML:
+Validated using **[W3C HTML Validator](https://validator.w3.org/)**
+
+CSS:
+Validated using Jigsaw via **[W3C](https://jigsaw.w3.org/css-validator/#validate_by_input)**
+
+![CSS validation](log/static/images/W3CCSS.jpg)
+
+Python:
+Validated using **[ExtendsClass Python tester](https://extendsclass.com/python-tester.html)**
+
+![Python validation](log/static/images/extendsclasspython.jpg)
+
 **Browser Compatibility:**
+
+Browser compatability was checked using both my own device (an Acer Aspire A514-52) which is running Google Chrome and with **[BrowserStack](https://www.browserstack.com/)**.
+
+Compatability was confirmed on the following;
+
+Google Chrome &#9745;
+
+Firefox &#9745;
+
+Microsoft Edge &#9745;
+
+Opera &#9745;
+
+Safari &#9745;
+
+Compatabilty with both Android and IOS devices was checked as well.
 
 
 **Accessibility Testing:**
+
 Accessibility testing was done through Google LightHouse. The result was 97%. The only issue noted being the light grey used for the login/logout text. I chose to leave this as i liked the asthetic and felt it was not significant enough to cause issues.
 
-![logged_out.html](log/static/images/lhaccess.jpg)
+![Accessibility test](log/static/images/lhaccess.jpg)
 
 **Responsivness:**
 
+Responsivness was also checked using **[BrowserStack](https://www.browserstack.com/)**. This showed the application to work on all screen sizes.
+
+Testing reponsivness on an Ipad Air 4
+
+![Responsivness test on an Ipad Air 4](log/static/images/bsipadair.jpg)
+
+Testing reponsivness on a Samsung Galaxy 9
+
+![Responsivness test on a Samsung Galaxy 9](log/static/images/bsgalaxy10.jpg)
+
+
+The application was also responsive on larger and smaller screens and worked on different devices and browsers.
 
 
 **User Story Testing:**
