@@ -355,12 +355,17 @@ There were countless other small errors solved throughout the development of thi
 
 **Browser Compatibility:**
 
+
 **Accessibility Testing:**
+Accessibility testing was done through Google LightHouse. The result was 97%. The only issue noted being the light grey used for the login/logout text. I chose to leave this as i liked the asthetic and felt it was not significant enough to cause issues.
+
+![logged_out.html](log/static/images/lhaccess.jpg)
 
 **Responsivness:**
 
-**User Story Testing:**
 
+
+**User Story Testing:**
 
 User:
 
