@@ -29,7 +29,7 @@
 
 
 
- ![Home Page](assets/images/readme-images/picture1.jpg)
+ ![Home Page](log/static/images/index.jpg)
 
 ## User Experience
 
@@ -181,6 +181,8 @@ The focus of this font being to provide the information in a non-distracting man
 
 ### **Index.html**
 
+![index.html](log/static/images/index.jpg)
+
 **Title:**
 The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation.
 
@@ -191,37 +193,42 @@ When the user is not logged in the options on display are Login and Register. Wh
 **The navigation bar:**
 This is a simple banner containing the four pages inn the application.. As seen below, the active page is depicted by the page heading being teal, while a mouseover changes the color to black indicating it is ready to be clicked on. This navigation bar was taken from the Bootstrap 5 library and ammended for my own use.
 
-![Navigation bar](assets/images/readme-images/picture5.jpg)
+![Navigation Bar](log/static/images/navbar.jpg)
 
 **Icon:**
 The dive mask icon was used throughout the application to provide a visual contiunation throughout the pages. This is a simple and aesthetically pleasing symbol that reiterated the theme of the application. The round shape contrasts well with the otherwise quite blocky theme.
 
-![Icon](assets/images/readme-images/picture6.jpg)
+![Icon and Title](log/static/images/title.jpg)
 
 **Cards:**
 The cards containing the prompts to log a dive or view your log are there to provide another way to navigate into these main areas of the application with ease.
 
+![Cards](log/static/images/cards.jpg)
+
 **Banner images:**
 This trio of images was chosen to form the banner instead of using a single image as they worked well together and provided an appealing insight into the application theme.
 
-![Banner images](assets/images/readme-images/picture7.jpg)
+![Banner Images](log/static/images/bannerimages.jpg)
 
 **Footer:**
 The footer contains links to various social media; Facebook, Twitter, YouTube and Instagram.
 These links are done using Font Awesome icons. The links do not currently go to specific areas within these social medias, however, if this application was to be put into real use, a youtube for videos from dives, an instagram for images and short videos, a facebook for communication and marketing and a twitter for news and marketing would be very beneficial.
 
-![Footer](assets/images/readme-images/picture9.jpg)
+![Footer](log/static/images/footer.jpg)
 
 ### **logadive.html**
+
+![logadive.html](log/static/images/logadive.jpg)
 
 **Log a dive form:**
 This is a straightforward and easy to naviagte 6 input field form. The user simply inputs their values and hits the Log My Dive button at the bottom. I was tempted when creating this form to have the input of depth and time automatically record as meters and minutes, respectively. I opted against this as i wanted the application to be as versatile as possible. So each input filed has a limit on characters but otherwise the user can input whatever readings they please. This means a diver who had completed a one hour and 30 minute dive doesnt need to write 90minutes and a diver that uses feet rather than meters for their depth can input feet/ft, whatever their prefered annotation is.
 This is also beneficial for the buddy section, as a diver generally has only one buddy, i was inclined to have a drop down of other members in the club to select from. However, as someone who regularly dives in a trio, with two buddies, i realised this would limit the usability again, so once again opted to leave it open ended.
 Hitting Log my Dive redirects the user to the log page, where they can view their dives.
 
-![Dropdown button](assets/images/readme-images/picture10.jpg)
 
 ### **logpage.html**
+
+![logpage.html](log/static/images/mylog.jpg)
 
 
 **My log:**
@@ -232,35 +239,44 @@ Below the log is an option to Log a dive, this button redirects the user to the 
 
 ### **diving_officer.html**
 
+![diving_officer.html](log/static/images/do.jpg)
+
 This page has the same theme as the home page. It is intended for those with staff status only to view. Staff status has to be applied through the admin tool in django for now, this is something that would be changed if i had more time and scope for this projects development.
 The diving officer home page gives the diving officer access to the members who are registered on the application and to all of their logs.
 
 **Club Logs:**
 This page is very similar to the personal logs page. It displays the dives logged by all divers, their username is present to indicate who logged each dive.
 
+![club_logpage.html](log/static/images/clublog.jpg)
+
 **Members:**
 This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email.
 
-![Contact Form](assets/images/readme-images/picture16.jpg)
+![club_members.html](log/static/images/members.jpg)
 
 ### **base_generic.html**
 
 This html file contains all of the base features for each page of the application, reducing duplication significantly throughout the code.
 
 
-### **login/logout/register**
+### **Login/Logout/Register**
 
 **Login:**
 This page contains the same theme as the other pages, complete with the image banner from the home page.
 The login form is on a raised card and has fields for username and password. When the user clicks login, it redirects to the home page (index.html)
 
+![login.html](log/static/images/login.jpg)
+
 **Logout:**
 When logout is clicked in any of the pages in the application it directs the user to the logout page, which simply indicates that the user is logged out and gives them the option to login again.
 Clicking login will redirect to the login page.
 
+![logged_out.html](log/static/images/loggedout.jpg)
+
 **Register:**
 This page contains a registration form that the user fills out. The form will return an error if the user inputs the wrong details, ie. spaces where they shouldnt be/wrong characters in passwords/passwords dont match. When the user has correctly filled out the form they are redirected to the home page of the app.
 
+![register_user.html](log/static/images/register.jpg)
 
 **Further features I would implement:**
 
@@ -426,13 +442,16 @@ Testing other elements:
 
 The login functionality at the top of the screen was appearing twice on the home page, i discovered this was due to a duplicate of the index.html document existing after i merged the branch i was working on to the main. Deleting this extra file fixed the issue.
 
-The delete function was redirecting back to the log but wasnt removing the dive that was supposed to be deleted. This was remedied by taking the delet function out of the delete.html and putting it next to the dive on the log page.
+The delete function was redirecting back to the log but wasnt removing the dive that was supposed to be deleted. This was remedied by taking the delete function out of the delete.html and putting it next to the dive on the log page.
 
 After merging the two branches i spent several hours trying to work out why i wasnt redirected to logged_out.html when i clicked logout but was instead redirected back to the home page. Ultimately i ended up looking through the setting.py from before the merge and found two lines that were now in my settings.py that werent there before i merged the files, when logout was redirecting as desired. The lines were LOGIN = '/' and LOGOUT = '/', these were an override that directed the user back to the home page when login/logout was clicked. After deleting them the app performed as desired.
 
 There was an interesting bug that meant when i filled in a dive log form and clicked log my dive, the form would refresh but the page would not redirect, the dive was logged when i manually navigated to my logged dives. This was solved with some expert help from my mentor.
 
+I spent a lot of time trying to work out how to give group permissions initially, so that i could assign permissions to diving officers for viewing others dives and editing members details. I ultimately decided to use 'is_staff' as a way to dictate who had access to the diving officer page. If i was doing this again and had more time to spare, i would further investigate this.
+
 There are hopefully no bugs present in the application now, if you happen to come across any, please email me at l.butler1993@gmail.com.
+
 ------------------------------------------------------------------
 ## Deployment
 
