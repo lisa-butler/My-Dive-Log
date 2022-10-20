@@ -159,12 +159,10 @@ The white background was chosen as it enabled the content to be very legible and
 The colors eventually selected for use were;
 
 * White #FFF -used for the background.
-* Grey #D3D3D3 -used for hover over functions and detailing.
-* Teal #008080 -used for heading, sub-headings and buttons.
+* Grey #D3D3D3 -used for buttons and detailing as well as headings.
+* Teal #008080 -used for heading, sub-headings and hover functions.
 * Black #000 -used for text as black on white is widely known as the most legible combination of colors.
 
-
-![Colors in use](assets/images/readme-images/picture4.jpg)
 
 **Fonts:**
 The font selected was based on what was clear and easy to read as well as feeling like it was suited for a diving-based theme.
@@ -184,35 +182,35 @@ The focus of this font being to provide the information in a non-distracting man
 ![index.html](log/static/images/index.jpg)
 
 **Title:**
-The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation.
+The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation. It is the largest tect on screen and populates from base_generic.html across all pages of the application.
 
 **Login/Logout/Register:**
-This function sits above the navigation bar to the left on all of the pages in the application. It grey in color and teal on mouseover, keeping with the general color theme of the application.
+This function sits above the navigation bar to the left on all of the pages in the application. It is grey in color and teal on mouseover, keeping with the general color theme of the application.
 When the user is not logged in the options on display are Login and Register. When the user is logged in these options are replaced with their username and Logout.
 
 **The navigation bar:**
-This is a simple banner containing the four pages inn the application.. As seen below, the active page is depicted by the page heading being teal, while a mouseover changes the color to black indicating it is ready to be clicked on. This navigation bar was taken from the Bootstrap 5 library and ammended for my own use.
+This is a simple banner containing the four pages in the application. Before the user logs in, only the Home tab is visible. Upon login, if the user is NOT staff then the user will have three tabs avalible to them. If the user is staff, they will have the fourth, diving officer tab, avalible. As seen below, the active page is depicted by the page heading being teal, while a mouseover changes the color to black, indicating it is ready to be clicked on. This navigation bar was taken from the Bootstrap 5 library and ammended for my own use.
 
 ![Navigation Bar](log/static/images/navbar.jpg)
 
 **Icon:**
-The dive mask icon was used throughout the application to provide a visual contiunation throughout the pages. This is a simple and aesthetically pleasing symbol that reiterated the theme of the application. The round shape contrasts well with the otherwise quite blocky theme.
+The dive mask icon was used throughout the application to provide a visual continuation throughout the pages. This is a simple and aesthetically pleasing symbol that reiterates the theme of the application. The round shape contrasts well with the otherwise quite blocky theme.
 
 ![Icon and Title](log/static/images/title.jpg)
 
 **Cards:**
-The cards containing the prompts to log a dive or view your log are there to provide another way to navigate into these main areas of the application with ease.
+The cards containing the prompts to log a dive or view your log are there to provide another way to navigate into these main areas of the application with ease. By placing these functions side by side in cards that hoover out from the page, the aesthetic of the page is improved and the options are highlighted for the user. These cards appear on the main page as well as the diving officer home page.
 
 ![Cards](log/static/images/cards.jpg)
 
 **Banner images:**
-This trio of images was chosen to form the banner instead of using a single image as they worked well together and provided an appealing insight into the application theme.
+This trio of images was chosen to form the banner instead of using a single image as they worked well together and provided an appealing insight into the application theme. The images were all taken by the creator of this application so no permissions were required to be granted. The color tone of the images worked well with the general color theme that was selected for this application.
 
 ![Banner Images](log/static/images/bannerimages.jpg)
 
 **Footer:**
 The footer contains links to various social media; Facebook, Twitter, YouTube and Instagram.
-These links are done using Font Awesome icons. The links do not currently go to specific areas within these social medias, however, if this application was to be put into real use, a youtube for videos from dives, an instagram for images and short videos, a facebook for communication and marketing and a twitter for news and marketing would be very beneficial.
+These links are created using Font Awesome icons. The links do not currently go to specific areas within these social medias, however, if this application was to be put into real use, a youtube for videos from dives, an instagram for images and short videos, a facebook for communication and marketing and a twitter for news and marketing would be very beneficial.
 
 ![Footer](log/static/images/footer.jpg)
 
@@ -221,8 +219,8 @@ These links are done using Font Awesome icons. The links do not currently go to 
 ![logadive.html](log/static/images/logadive.jpg)
 
 **Log a dive form:**
-This is a straightforward and easy to naviagte 6 input field form. The user simply inputs their values and hits the Log My Dive button at the bottom. I was tempted when creating this form to have the input of depth and time automatically record as meters and minutes, respectively. I opted against this as i wanted the application to be as versatile as possible. So each input filed has a limit on characters but otherwise the user can input whatever readings they please. This means a diver who had completed a one hour and 30 minute dive doesnt need to write 90minutes and a diver that uses feet rather than meters for their depth can input feet/ft, whatever their prefered annotation is.
-This is also beneficial for the buddy section, as a diver generally has only one buddy, i was inclined to have a drop down of other members in the club to select from. However, as someone who regularly dives in a trio, with two buddies, i realised this would limit the usability again, so once again opted to leave it open ended.
+This is a straightforward and easy to naviagte form with 6 input fields. The user simply inputs their values and hits the Log My Dive button at the bottom. I was tempted, when creating this form, to have the input of depth and time automatically record as meters and minutes, respectively. I opted against this as i wanted the application to be as versatile as possible. So each input field has a limit on characters but otherwise the user can input whatever readings they please. This means a diver who had completed a one hour and 30 minute dive doesnt need to write 90 minutes and a diver that uses feet rather than meters for their depth can input feet/ft, whatever their prefered annotation is.
+This is also beneficial for the buddy section. As a diver generally has only one buddy, i was inclined to have a drop down of other members in the club to select from. However, as someone who regularly dives in a trio (with two buddies) i realised this would limit the usability, so once again opted to leave it open ended.
 Hitting Log my Dive redirects the user to the log page, where they can view their dives.
 
 
@@ -233,7 +231,8 @@ Hitting Log my Dive redirects the user to the log page, where they can view thei
 
 **My log:**
 This is a seven field data table that displays the divers own logged dives. The table is placed on a raised card for asthetic purposes, a theme that is used throughout.
-The data is outlined below the headings, giving the diver a view of their dives to date, recorded as they please.
+The data is outlined below the headings, giving the diver a view of their dives to date. The dates are in order of most recent first.
+On smaller screens, those 600px and below, a side scrolling feature has been implemented. This is not optimum and would have been avoided had there been more time to develop a different data display type for these smaller screens.
 Below the log is an option to Log a dive, this button redirects the user to the log page.
 
 
@@ -242,15 +241,15 @@ Below the log is an option to Log a dive, this button redirects the user to the 
 ![diving_officer.html](log/static/images/do.jpg)
 
 This page has the same theme as the home page. It is intended for those with staff status only to view. Staff status has to be applied through the admin tool in django for now, this is something that would be changed if i had more time and scope for this projects development.
-The diving officer home page gives the diving officer access to the members who are registered on the application and to all of their logs.
+The diving officer home page gives the diving officer access to the members who are registered on the application and to all of their logs. It has the raised boxes as on the index page, these direct the user to view club logs or view club members.
 
 **Club Logs:**
-This page is very similar to the personal logs page. It displays the dives logged by all divers, their username is present to indicate who logged each dive.
+This page is very similar to the personal logs page. It displays the dives logged by all divers. Their username is present to indicate who logged each dive. Dives are in order of most recent first. Had this been a project i had more time on, i would have developed a function to filter these results. At the bottom of the log there is a button to return the user to the diving officer home page
 
 ![club_logpage.html](log/static/images/clublog.jpg)
 
 **Members:**
-This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email.
+This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email. There is also a button at the bottom of the page to allow the user to return to the diving officer home page. Had i had more time i would have developed a way for the user to delete and edit divers details.
 
 ![club_members.html](log/static/images/members.jpg)
 
@@ -263,7 +262,7 @@ This html file contains all of the base features for each page of the applicatio
 
 **Login:**
 This page contains the same theme as the other pages, complete with the image banner from the home page.
-The login form is on a raised card and has fields for username and password. When the user clicks login, it redirects to the home page (index.html)
+The login form is on a raised card and has fields for username and password. When the user clicks login, it redirects to the home page (index.html) There is also an option to register for users who do not have accounts. This redirects the user to the registration form.
 
 ![login.html](log/static/images/login.jpg)
 
@@ -274,7 +273,7 @@ Clicking login will redirect to the login page.
 ![logged_out.html](log/static/images/loggedout.jpg)
 
 **Register:**
-This page contains a registration form that the user fills out. The form will return an error if the user inputs the wrong details, ie. spaces where they shouldnt be/wrong characters in passwords/passwords dont match. When the user has correctly filled out the form they are redirected to the home page of the app.
+This page contains a registration form that the user fills out. The form will return an error if the user inputs the wrong details, ie. spaces where they shouldnt be/wrong characters in passwords/passwords dont match. When the user has correctly filled out the form they are redirected to the home page of the app where they are automatically logged in and their username is dispalyed at the top of the page.
 
 ![register_user.html](log/static/images/register.jpg)
 
@@ -346,8 +345,12 @@ The languages used in this project were;
 Troubleshooting was quite varied on this project as it involved quite a wide range of different technologies. Initially the biggest issue i ran into was with settign up the authentication and registration system. I spent quite a few weeks trying to get allauth to work before abandoning it in favour of django contrib auth, something that had much more extensive documentation avalible for it and was ultimately much simpler to use.
 I opened a new branch to attempt this new authentication system on and when i merged the branches, later on, it took some time to work through the merge conflicts, remove unneeded duplicates, folders and code.
 There were countless other small errors solved throughout the development of this application.
+Troubleshooting was managed using dev tools, printing to terminal and utilising a lot of googling.
 
 **Error Handling and input control:**
+
+Input control was something i spent some time thinking about. For the form i chose to be as open ended as possible. I wanted the user to have the ability to record times as 1 hour and 40 minutes/100minutes/100 mins/1h40m, whatever they felt worked for them. The date was a date picker, ensuring that the dates could be read by newset first. All inputs has a 'required' attribute on them except the note field.
+Input control played a bigger role in the registration form. The username could not contain spaces, email had to be in email format and passwords needed to match each other for the form to be accepted. All fields were also marked as required.
 
 ### **Testing:**
 
@@ -390,6 +393,13 @@ Compatabilty with both Android and IOS devices was checked as well.
 Accessibility testing was done through Google LightHouse. The result was 97%. The only issue noted being the light grey used for the login/logout text. I chose to leave this as i liked the asthetic and felt it was not significant enough to cause issues.
 
 ![Accessibility test](log/static/images/lhaccess.jpg)
+
+
+**Performance Testing:**
+
+Performace testing was checked using Google Lighthouse also with a very good result.
+
+![Performance testing](log/static/images/lighthouse1.jpg)
 
 **Responsivness:**
 
