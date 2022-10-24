@@ -28,6 +28,8 @@
  8. [Content](#content)
 
 
+------------------------------------------------------------------
+
 
  ![Home Page](log/static/images/index.jpg)
 
@@ -41,10 +43,13 @@ Pre project planning involved developing user stories, wireframe mock ups, logic
 I also researched the software stack to use for this specific project. As it is Django based i was tied to using Django and Python, however, I looked into using React and various alternatives for Bootstrap.
 
 **Strategy:**
+
 Determining the best approach meant investigating the needs of the potential users. This included the needs of the divers logging and reviewing their dives and the diving officers reviewing club logs and club members.
 
 **User stories:**
+
 As a diver:
+
 I want to be able to log into an account so that my dives are password protected.
 I want to be able to log a dive, including depth, time, buddy, location etc.
 I want to be able to make a note when logging a dive.
@@ -54,11 +59,13 @@ I want to be able to review my logged dives in a dive log page.
 I want my data to be stored in a database so that it is avalible each time i log into the system.
 
 As a diving officer:
+
 I want to be able to log and review my own dives as a diver.
 I want to be able to view all dives logged by members in my club.
 I want to be able to view all of my club members.
 
 **Scope:**
+
 The web application should have a clear and consistent layout including navigation and login, logout functionality.
 The web application should be accessible on all devices for divers to log their dives on the go.
 The web application should have a navigation bar that is self explanitory.
@@ -75,15 +82,18 @@ There was also a login/logout/register functionality at the top of each page and
 
 **Home page wireframe utilising Balsamiq**
 
+
 ![Home page wireframe using Balsamiq](log/static/images/balsamiq-home.jpg)
 
 **Home:**
+
 This page should contain an overview of what the purpose of the site is.
 The navigation bar should be clear and easy to access.
 A prompt to take the diver to the log a dive section and a prompt to view thir log should be present to speed up navigation.
 Login and logout functionality should be present with a register option for non logged in users.
 
 **Log a dive:**
+
 This page should contain the same theme as the other pages.
 There should be a navigtion bar with the active tag indicated somehow.
 The logging functionality should be straightforward and fairly unbounded so that the user can input information in a way that suits them, ie can record two dive buddies if needed, can record depth as 30m or 30 meters or 60 foot etc.
@@ -96,6 +106,7 @@ This page should not be avalible to users who are not logged in.
 ![Log a Dive page wireframe using Balsamiq](log/static/images/balsamiq-logadive.jpg)
 
 **My logs:**
+
 This page should contain the same theme as the other pages.
 This page should display all of the divers logged dives specific to them.
 Content fileds from their logged dives such as buddy, depth etc should be visible.
@@ -107,6 +118,7 @@ This page should not be avalible to users who are not logged in.
 ![Logs page wireframe using Balsamiq](log/static/images/balsamiq-log.jpg)
 
 **Diving officer:**
+
 This page should contain the same theme as the other pages.
 This page should provide the diving officer with the options to view the club logs or to view the club members.
 The club logs hsould contain every dive logged by members of this club with their username visible.
@@ -114,7 +126,9 @@ The members section should show all members in the club.
 This page should not be avalible to users who are not logged in and to members who do not have staff status.
 
 **Login/Logout/Register:**
+
 Login:
+
 This page should contain a simple input form with username and password inputs.
 This page should have the same styles as the other pages in the app.
 Clicking login should redirect to the home page when the login is sucessful.
@@ -126,6 +140,7 @@ Failed login should indicate that the login failed and return the login page aga
 ![Login page wireframe using Balsamiq](log/static/images/balsamiq-login.jpg)
 
 Register:
+
 This page should have the same styling as the rest of the application.
 It should include a registration form requesting; email, username, first and last names and a password to be entered and confrimed.
 There should be an offer to login instead if you already have an account.
@@ -133,6 +148,7 @@ There should be prompts as to what should be entered in each input field.
 On sucessful registration the user should be redirected to the home page of the app.
 
 Logout:
+
 Selecting logout should redirect the user to a page that cofirms they are logged out.
 This page should have the same styling as the rest of the application.
 There should be a prompt for the user to login again.
@@ -144,6 +160,7 @@ There should be a prompt for the user to login again.
 
 
 **Wireframes:**
+
 A wireframe was done for each page of the application using Balsamiq before progressing into developing it.
 The basic plan for the application was to keep it as uncluttered and minimalistic as possible while providing the required functionality. As the mean age of divers is generally older, it was intended that the application be as intuitive as possible.
 Wireframing helped with deciding on a general look of the application and how it would be navigated by a user, leading to changes in design happening before any coding began.
@@ -154,6 +171,7 @@ Wireframing helped with deciding on a general look of the application and how it
 Background: It was decided to stick with a very basic and modern theme of a white background with content kept neat and centrally placed. This benefitted accessibility as the elderly population in diving who would not be as tech savvy, generally, would have a better chance of navigating the application. A basic icon that was used on an earlier application was selected as this had a nice color pallet and fitted the theme in a visually pleasing way. A small banner of photographs was used to add some life to the quieter pages.
 
 **Color:**
+
 The white background was chosen as it enabled the content to be very legible and to stand out for the user, making the site more navigatable.
 
 The colors eventually selected for use were;
@@ -165,6 +183,7 @@ The colors eventually selected for use were;
 
 
 **Fonts:**
+
 The font selected was based on what was clear and easy to read as well as feeling like it was suited for a diving-based theme.
 The fonts chosen was;
 	-Ubuntu
@@ -182,33 +201,40 @@ The focus of this font being to provide the information in a non-distracting man
 ![index.html](log/static/images/index.jpg)
 
 **Title:**
+
 The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation. It is the largest tect on screen and populates from base_generic.html across all pages of the application.
 
 **Login/Logout/Register:**
+
 This function sits above the navigation bar to the left on all of the pages in the application. It is grey in color and teal on mouseover, keeping with the general color theme of the application.
 When the user is not logged in the options on display are Login and Register. When the user is logged in these options are replaced with their username and Logout.
 
 **The navigation bar:**
+
 This is a simple banner containing the four pages in the application. Before the user logs in, only the Home tab is visible. Upon login, if the user is NOT staff then the user will have three tabs avalible to them. If the user is staff, they will have the fourth, diving officer tab, avalible. As seen below, the active page is depicted by the page heading being teal, while a mouseover changes the color to black, indicating it is ready to be clicked on. This navigation bar was taken from the Bootstrap 5 library and ammended for my own use.
 
 ![Navigation Bar](log/static/images/navbar.jpg)
 
 **Icon:**
+
 The dive mask icon was used throughout the application to provide a visual continuation throughout the pages. This is a simple and aesthetically pleasing symbol that reiterates the theme of the application. The round shape contrasts well with the otherwise quite blocky theme.
 
 ![Icon and Title](log/static/images/title.jpg)
 
 **Cards:**
+
 The cards containing the prompts to log a dive or view your log are there to provide another way to navigate into these main areas of the application with ease. By placing these functions side by side in cards that hoover out from the page, the aesthetic of the page is improved and the options are highlighted for the user. These cards appear on the main page as well as the diving officer home page.
 
 ![Cards](log/static/images/cards.jpg)
 
 **Banner images:**
+
 This trio of images was chosen to form the banner instead of using a single image as they worked well together and provided an appealing insight into the application theme. The images were all taken by the creator of this application so no permissions were required to be granted. The color tone of the images worked well with the general color theme that was selected for this application.
 
 ![Banner Images](log/static/images/bannerimages.jpg)
 
 **Footer:**
+
 The footer contains links to various social media; Facebook, Twitter, YouTube and Instagram.
 These links are created using Font Awesome icons. The links do not currently go to specific areas within these social medias, however, if this application was to be put into real use, a youtube for videos from dives, an instagram for images and short videos, a facebook for communication and marketing and a twitter for news and marketing would be very beneficial.
 
@@ -219,6 +245,7 @@ These links are created using Font Awesome icons. The links do not currently go 
 ![logadive.html](log/static/images/logadive.jpg)
 
 **Log a dive form:**
+
 This is a straightforward and easy to naviagte form with 6 input fields. The user simply inputs their values and hits the Log My Dive button at the bottom. I was tempted, when creating this form, to have the input of depth and time automatically record as meters and minutes, respectively. I opted against this as i wanted the application to be as versatile as possible. So each input field has a limit on characters but otherwise the user can input whatever readings they please. This means a diver who had completed a one hour and 30 minute dive doesnt need to write 90 minutes and a diver that uses feet rather than meters for their depth can input feet/ft, whatever their prefered annotation is.
 This is also beneficial for the buddy section. As a diver generally has only one buddy, i was inclined to have a drop down of other members in the club to select from. However, as someone who regularly dives in a trio (with two buddies) i realised this would limit the usability, so once again opted to leave it open ended.
 Hitting Log my Dive redirects the user to the log page, where they can view their dives.
@@ -230,6 +257,7 @@ Hitting Log my Dive redirects the user to the log page, where they can view thei
 
 
 **My log:**
+
 This is a seven field data table that displays the divers own logged dives. The table is placed on a raised card for asthetic purposes, a theme that is used throughout.
 The data is outlined below the headings, giving the diver a view of their dives to date. The dates are in order of most recent first.
 On smaller screens, those 600px and below, a side scrolling feature has been implemented. This is not optimum and would have been avoided had there been more time to develop a different data display type for these smaller screens.
@@ -244,11 +272,13 @@ This page has the same theme as the home page. It is intended for those with sta
 The diving officer home page gives the diving officer access to the members who are registered on the application and to all of their logs. It has the raised boxes as on the index page, these direct the user to view club logs or view club members.
 
 **Club Logs:**
+
 This page is very similar to the personal logs page. It displays the dives logged by all divers. Their username is present to indicate who logged each dive. Dives are in order of most recent first. Had this been a project i had more time on, i would have developed a function to filter these results. At the bottom of the log there is a button to return the user to the diving officer home page
 
 ![club_logpage.html](log/static/images/clublog.jpg)
 
 **Members:**
+
 This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email. There is also a button at the bottom of the page to allow the user to return to the diving officer home page. Had i had more time i would have developed a way for the user to delete and edit divers details.
 
 ![club_members.html](log/static/images/members.jpg)
@@ -261,18 +291,21 @@ This html file contains all of the base features for each page of the applicatio
 ### **Login/Logout/Register**
 
 **Login:**
+
 This page contains the same theme as the other pages, complete with the image banner from the home page.
 The login form is on a raised card and has fields for username and password. When the user clicks login, it redirects to the home page (index.html) There is also an option to register for users who do not have accounts. This redirects the user to the registration form.
 
 ![login.html](log/static/images/login.jpg)
 
 **Logout:**
+
 When logout is clicked in any of the pages in the application it directs the user to the logout page, which simply indicates that the user is logged out and gives them the option to login again.
 Clicking login will redirect to the login page.
 
 ![logged_out.html](log/static/images/loggedout.jpg)
 
 **Register:**
+
 This page contains a registration form that the user fills out. The form will return an error if the user inputs the wrong details, ie. spaces where they shouldnt be/wrong characters in passwords/passwords dont match. When the user has correctly filled out the form they are redirected to the home page of the app where they are automatically logged in and their username is dispalyed at the top of the page.
 
 ![register_user.html](log/static/images/register.jpg)
@@ -342,6 +375,7 @@ The languages used in this project were;
 <a name="test"></a>
 
 ### **Troubleshooting:**
+
 Troubleshooting was quite varied on this project as it involved quite a wide range of different technologies. Initially the biggest issue i ran into was with settign up the authentication and registration system. I spent quite a few weeks trying to get allauth to work before abandoning it in favour of django contrib auth, something that had much more extensive documentation avalible for it and was ultimately much simpler to use.
 I opened a new branch to attempt this new authentication system on and when i merged the branches, later on, it took some time to work through the merge conflicts, remove unneeded duplicates, folders and code.
 There were countless other small errors solved throughout the development of this application.
@@ -510,24 +544,59 @@ I spent a lot of time trying to work out how to give group permissions initially
 There are hopefully no bugs present in the application now, if you happen to come across any, please email me at l.butler1993@gmail.com.
 
 ------------------------------------------------------------------
+
 ## Deployment
 
 <a name="deploy"></a>
 
-Deployment of the program was done via Heroku, the process is below;
+The live deployed application can be found at [my-dive-log](https://my-dive-log.herokuapp.com/).
 
-* When you have a Heroku account and have signed in there is a white button with purple outline on the top right hand side of the main dashboard labelled new. This button opens a dropdown within which we select 'Create new app'. This will redirect us to a page where we select a name for our app as well as inputting our region. We the click 'Create app'.
-* On the page you are redirected to, there is a navigation bar along the top, under the name of the app. Click on the final tab labelled 'Settings'. In this page, scroll down past App information to the section labelled 'Config Vars'. Click on the button to 'Reveal config vars'. Postgres and a secret key will need to be added to this. Once the config vars are saved they should be added to the env.py file, which should be added to the .gitignore file so that the config vars are not publically avalible.
-* When you scroll up to the top of the page again, you can select the 'Deploy' tab from the same nav bar we found settings on. On this page select Github as youR deployment method. When you click on Github you will be able to search for the repo you want to use. You can then select to deploy manually or automatically. Selecting automatically will have the app deploy each new update.
-* You can then make a push in your Gitpod workspace and your app should deploy.
+### Heroku Deployment
 
-To manually deploy;
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
-	* Enter 'heroku login -i' in the terminal and enter your own login details.
-	* The enter 'heroku apps' in the terminal.
-	* Followed by the command: heroku git:remote -a My-Dive-Log.
-	* Then push to both the main branch and Heroku using the terminal commands: 'git push origin main' and 'git push heroku main' respectively.
-	* The app should now be avalible on Heroku.
+Deployment steps are as follows, after account setup:
+
+- Select *New* in the top-right corner of your Heroku Dashboard, and select *Create new app* from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select *Create App*.
+- From the new app *Settings*, click *Reveal Config Vars*, and set the following key/value pairs:
+  - `CLOUDINARY_URL` (insert your own Cloudinary API key here)
+  - `DATABASE_URL` (this comes from the **Resources** tab, you can get your own Postgres Database using the Free Hobby Tier)
+  - `SECRET_KEY` (this can be any random secret key)
+
+Heroku needs two additional files in order to deploy properly.
+- requirements.txt
+- Procfile
+
+You can install this project's requirements (where applicable) using: `pip3 install -r requirements.txt`. If you have your own packages that have been installed, then the requirements file needs updated using: `pip3 freeze --local > requirements.txt`
+
+The Procfile can be created with the following command: `echo web: gunicorn log.wsgi > Procfile`
+
+For Heroku deployment, follow these steps to connect your GitHub repository to the newly created app:
+
+Either:
+- Select "Automatic Deployment" from the Heroku app.
+
+Or:
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a <app_name>` (replace app_name with your app, without the angle-brackets)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type: `git push heroku main`
+
+The frontend terminal should now be connected and deployed to Heroku.
+
+### Local Deployment
+
+*Gitpod* IDE was used to write the code for this project.
+
+To make a local copy of this repository, you can clone the project by typing the follow into your IDE terminal:
+- `git clone https://github.com/lisa-butler/My-Dive-Log.git`
+
+You can install this project's requirements (where applicable) using: `pip3 install -r requirements.txt`.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lisa-butler/My-Dive-Log)
+
 ------------------------------------------------------------------
 
 ## Credits and Acknowledgements
@@ -542,6 +611,7 @@ To manually deploy;
 
 
 ### **Acknowledgements:**
+
 * My program coordinator Kasia for contiuned support and advice throughout.
 * My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
 * My mentor Tim Nelson for going above and beyond to ensure i was presenting my best work and that i understood each concept we discussed.
