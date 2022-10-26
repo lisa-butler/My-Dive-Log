@@ -16,6 +16,14 @@
 
 ------------------------------------------------------------------
 
+For your convienienece an Assessor Access account has been created with staff status with the following credentials;
+
+**Username:** Assessor_Access
+
+**Password:** codeinstitute123
+
+------------------------------------------------------------------
+
 ## Contents
 
  1. [User Experience](#ux)
@@ -455,25 +463,42 @@ The application was also responsive on larger and smaller screens and worked on 
 
 User:
 
+*As a user i can create an account so that i can use the application to securely store my dives under my name.*
+
+&#9745; Django.contrib.auth installed which has sign in/ sign up and register functionality. Login required for viewing logs and logging dives.
+
+![Registration form](log/static/images/usregister.jpg)
+
 *As a diver I can make a log input of my dive details (depth, time, location) so that I have this recorded in my dive log.*
 
-&#9745; Django.contrib.auth installed which has sign in/ sign up and register functionality.
+&#9745; Log a dive has these input fields with an optional note field avalible also.
+
+![Log a dive input fields](log/static/images/usloging.jpg)
 
 *As a diver I can edit my logged dives so that I can alter details where needed*
 
 &#9745; An option to edit the dive avalible and a html page that facilitates this avalible. Dive updated and redirects to log.
 
+![Editing a previously logged dive](log/static/images/usedit.jpg)
+
 *As a diver I can delete a dive from my log so that I have full control over what dives i have in my log.*
 
 &#9745; A delete option is avalible for each dive, user can delete their own dives.
+
+My log before deleting the dive;
+
+![My log before deleting dive](log/static/images/usfordelete.jpg)
+
+My log after deleting the dive;
+
+![My log with dive deleted](log/static/images/usdeleted.jpg)
 
 *As a Diver I can view my logged dives so that I have access to a log of my dives*
 
 &#9745; Html page for viewing the users own logged dives avalible. Dives in order of most recent for convienience.
 
-*As a user I can create and account so that I can use the app to log and view my dives.*
+![My log](log/static/images/usmylog.jpg)
 
-&#9745; Full login and register functionality avalible with login required for viewing logs and logging dives.
 
 Diving officer:
 
@@ -481,15 +506,19 @@ Diving officer:
 
 &#9745; Diving officer (who has staff status) has access to a means to view all divers logs in order of most recent for convienience.
 
+![Diving officer club dive log](log/static/images/usdopage.jpg)
+
 *As a diving officer I can view a list of my club members on the system so that i know who is contributing and in the event that it is extensive, i can see all of my members.*
 
 &#9745; Diving officer who has staff status can view a list of members, complete with their email and first and last names.
+
+![Diving officer members view](log/static/images/usclubmem.jpg)
 
 *As a diving officer I can log my own dives within the same profile so that i dont need to have two profiles and i can keep my own log.*
 
 &#9745; The diving officer has access to all of the same functionality as the other users, the diving officer section of the application is for users with staff status only (the diving officer only) and is a seperate section of the application.
 
-
+![Diving officer navigation options](log/static/images/usdoaccess.jpg)
 
 
 **Manual Testing:**
@@ -521,6 +550,12 @@ Testing other elements:
 * Navigation of the application is intuitive. &#9745;
 * When the user is logged in their username shows at the top of the screen. &#9745;
 * When the user is not logged in the option to login or register shows. &#9745;
+
+
+**Unit Testing:**
+
+This was done using pythons 'unittest' module that is part of the standard python library.
+
 
 
 ------------------------------------------------------------------
