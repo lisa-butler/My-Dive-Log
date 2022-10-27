@@ -9,7 +9,7 @@
 </section>
 <article class="container text-center">
     <h3 class="textbox">Login</h3>
-    <p class="infpara">Dont have an account yet? <a href="{% url 'register_user'%}">Register here</a></li></p>
+    <p class="infpara">Dont have an account yet? <a href="{% url 'register_user'%}">Register here</a></p>
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
   {% endif %}
