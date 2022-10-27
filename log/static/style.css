@@ -117,14 +117,14 @@ ul {
     margin: 0em;
 }
 
-#login {
+.login {
     font-weight: 600;
     font-size: medium;
     color: grey;
     padding: 0.2em;
 }
 
-#login:hover {
+.login:hover {
     color: teal;
   }
 
@@ -504,7 +504,7 @@ footer {
     }
 
 
-    #login {
+    .login {
         font-size: 70%;
     }
 

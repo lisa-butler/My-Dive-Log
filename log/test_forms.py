@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .forms import ItemForm
 
+
 class TestItemForm(TestCase):
 
     def test_item_date_is_required(self):
@@ -31,7 +32,7 @@ class TestItemForm(TestCase):
         form = ItemForm({'buddy': ''})
         self.assertFalse(form.is_valid())
         self.assertIn('buddy', form.errors.keys())
-        self.assertEqual(form.errors['buddy'][0], 'This field is required.')              
+        self.assertEqual(form.errors['buddy'][0], 'This field is required.')
 
     def test_item_note_field_is_not_required(self):
         form = ItemForm({'note': 'Test note'})
@@ -39,4 +40,9 @@ class TestItemForm(TestCase):
 
     def test_fields_are_explicit_in_form_metaclass(self):
         form = ItemForm()
-        self.assertEqual(form.Meta.fields, ['date', 'location', 'depth', 'time', 'buddy', 'note'])
+        self.assertEqual(
+            form.Meta.fields, [
+                'date', 'location', 'depth',
+                'time', 'buddy', 'note'
+            ]
+        )

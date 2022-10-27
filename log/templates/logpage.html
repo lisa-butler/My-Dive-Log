@@ -23,8 +23,8 @@
   </ul>
 </nav>
 <h2 class="intro">Logged Dives</h2>
-<div class='card text  container box' id="box-square">
-  <div class="container mt-3" id="md-box">
+<div class='container box' id="box-square">
+  <div class="container table-responsive mt-3" id="md-box">
     <table class="table-borderless table-hover table" id="divetable">
       <thead>
         <tr>
@@ -55,6 +55,10 @@
                 class="fa-solid fa-trash-can"></i></a></td>
         </tr>
       </tbody>
+      {% empty %}
+      <tr>
+        <td colspan="9"><h3 class= "intro">No Dive Records Found</h3></td>
+      </tr>
       {% endfor %}
     </table>
   </div>

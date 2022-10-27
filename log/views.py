@@ -95,7 +95,11 @@ def register_request(request):
             messages.success(request, "Registration successful.")
             return redirect("get_home")
     form = NewUserForm()
-    return render (request=request, template_name="registration/register_user.html", context={"register_form":currentForm})
+    return render(
+        request=request,
+        template_name="registration/register_user.html",
+        context={"register_form": currentForm}
+    )
 
 
 def diving_officer_home(request):
@@ -118,4 +122,3 @@ def get_login(request):
 
 def logout(request):
     return render(request, 'logged_out.html')
-

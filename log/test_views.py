@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Item
 
+
 class TestViews(TestCase):
 
     def test_get_logpage(self):
@@ -24,7 +25,6 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/')
         existing_items = Item.objects.filter(id=item.id)
         self.assertEqual(len(existing_items), 0)
-
 
     def test_get_edit_item_page(self):
         item = Item.objects.create(name='Test Log Item')
