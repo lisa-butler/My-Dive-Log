@@ -28,9 +28,9 @@
           id="circle-cover-image">
       </div>
     </div>
-    {% if user.is_authenticated %}
     <div id="login_links">
       <ul class="l-in-funct">
+        {% if user.is_authenticated %}
         <li class="login_funct" id="loggedin">User: {{ user.get_username }}</li>
         <li class="login_funct"><a class="nav-link login" href="{% url 'logout'%}">Logout</a></li>
         {% else %}
