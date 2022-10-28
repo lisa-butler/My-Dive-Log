@@ -417,15 +417,21 @@ Browser compatability was checked using both my own device (an Acer Aspire A514-
 
 Compatability was confirmed on the following;
 
-Google Chrome &#9745;
+Google Chrome (tested on my own device) &#9745;
 
-Firefox &#9745;
+![Chrome testing](log/static/images/chrome.jpg)
 
-Microsoft Edge &#9745;
+Firefox (tested on my own device) &#9745;
 
-Opera &#9745;
+![Firefox testing](log/static/images/firefox.jpg)
 
-Safari &#9745;
+Microsoft Edge (tested on my own device) &#9745;
+
+![Microsoft edge testing](log/static/images/edge.jpg)
+
+Opera (tested on BrowserStack) &#9745;
+
+Safari (tested on BrowserStack) &#9745;
 
 Compatabilty with both Android and IOS devices was checked as well.
 
@@ -555,6 +561,13 @@ Testing other elements:
 **Unit Testing:**
 
 This was done using pythons 'unittest' module that is part of the standard python library.
+Tests were done on the form elements of this application.
+
+![Diving officer navigation options](log/static/images/usdoaccess.jpg)
+
+![Diving officer navigation options](log/static/images/usdoaccess.jpg)
+
+
 
 
 
