@@ -269,6 +269,7 @@ These links are created using Font Awesome icons. The links do not currently go 
 This is a straightforward and easy to naviagte form with 6 input fields. The user simply inputs their values and hits the Log My Dive button at the bottom. I was tempted, when creating this form, to have the input of depth and time automatically record as meters and minutes, respectively. I opted against this as i wanted the application to be as versatile as possible. So each input field has a limit on characters but otherwise the user can input whatever readings they please. This means a diver who had completed a one hour and 30 minute dive doesnt need to write 90 minutes and a diver that uses feet rather than meters for their depth can input feet/ft, whatever their prefered annotation is.
 This is also beneficial for the buddy section. As a diver generally has only one buddy, i was inclined to have a drop down of other members in the club to select from. However, as someone who regularly dives in a trio (with two buddies) i realised this would limit the usability, so once again opted to leave it open ended.
 Hitting Log my Dive redirects the user to the log page, where they can view their dives.
+A major issue i ran into with this form was alignmnt of the input boxes. I was able to get the boxes to be aligned, but this resulted in issues in the responsivness of the application so i ultimately decided to leave the boxes slightly messier. If i had more time on tis issue i feel id be able to come to a conclusion that satisfies both issues.
 
 
 ### **logpage.html**
