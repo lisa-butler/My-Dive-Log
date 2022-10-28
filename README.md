@@ -1,7 +1,8 @@
 # Portfolio-Project 4
 ## My Dive Log
-### This web application was built as portfolio project four in the diploma in software development at the code institute. The web application is intended to be used as a digital log for dives. Divers use paper log books to record their depths, times, locations etc of dives and Diving officers (dive organisers) also use a paper copy to keep track of divers, their buddies and their dive details. This application aims to provide a digital resource to tackle this.
+### This web application was built for Portfolio Project Four of the Code Institutes Diploma in Software Development. The web application is intended to be used as a digital log for dives. Divers use paper log books to record their depths, times, locations etc of dives. Diving officers (dive organisers) also use a paper copy to keep track of divers, their buddies and their dive details. This application aims to provide a digital resource to tackle this.
 
+------------------------------------------------------------------
 
 ### Lisa Butler
 
@@ -48,7 +49,7 @@ For your convienienece an Assessor Access account has been created with staff st
 
 I decided to create this dive log for my project as a digital dive log is not something that is avalible yet but is something that many people would find very useful. I have had this idea for a while so i have enjoyed seeing it coming together.
 Pre project planning involved developing user stories, wireframe mock ups, logic flow diagrams and researching some basic styling ideas.
-I also researched the software stack to use for this specific project. As it is Django based i was tied to using Django and Python, however, I looked into using React and various alternatives for Bootstrap.
+I also researched the software stack to use for this specific project. As it is Django based i was tied to using Django and Python, however, I looked into using React and various alternatives for Bootstrap. I ultimately ended up usiing Bootstrap 5 and Djangos built in functionality.
 
 **Strategy:**
 
@@ -58,42 +59,42 @@ Determining the best approach meant investigating the needs of the potential use
 
 As a diver:
 
-I want to be able to log into an account so that my dives are password protected.
-I want to be able to log a dive, including depth, time, buddy, location etc.
-I want to be able to make a note when logging a dive.
-I want to be able to edit my logged dives.
-I want to be able to delete my logged dives.
-I want to be able to review my logged dives in a dive log page.
-I want my data to be stored in a database so that it is avalible each time i log into the system.
+* I want to be able to log into an account so that my dives are password protected.
+* I want to be able to log a dive, including depth, time, buddy, location etc.
+* I want to be able to make a note when logging a dive.
+* I want to be able to edit my logged dives.
+* I want to be able to delete my logged dives.
+* I want to be able to review my logged dives in a dive log page.
+* I want my data to be stored in a database so that it is avalible each time i log into the system.
 
 As a diving officer:
 
-I want to be able to log and review my own dives as a diver.
-I want to be able to view all dives logged by members in my club.
-I want to be able to view all of my club members.
+* I want to be able to log and review my own dives as a diver.
+* I want to be able to view all dives logged by members in my club.
+* I want to be able to view all of my club members.
 
 These were added into the Issues section on Github for effective project planning and moved on the projects board as i progressed through them.
 
  ![Issues](log/static/images/issues.jpg)
 
-GitHub Issue Tracker **[Issues](https://github.com/lisa-butler/My-Dive-Log/issues?q=is%3Aissue+is%3Aclosed)**
+GitHub **[Issue Tracker](https://github.com/lisa-butler/My-Dive-Log/issues?q=is%3Aissue+is%3Aclosed)**
 
 ![Projects](log/static/images/projects.jpg)
 
-GitHub Projects Board **[Projects Board](https://github.com/users/lisa-butler/projects/3)**
+GitHub **[Projects Board](https://github.com/users/lisa-butler/projects/3)**
 
 
 
 **Scope:**
 
-The web application should have a clear and consistent layout including navigation and login, logout functionality.
-The web application should be accessible on all devices for divers to log their dives on the go.
-The web application should have a navigation bar that is self explanitory.
-Logging a dive should be as straight forward and quick as possible.
-Reviewing logged dives should be simple and easy to view.
-Logging in and out should be staright forward and easy to do.
-Viewing club logs should be able to be done sepertely from personal logs so that the diving officer can just have one account.
-The application should be easy to use and require as few clicks as possible to log a dive quickly after returing from the water.
+* The web application should have a clear and consistent layout including navigation and login, logout functionality.
+* The web application should be accessible on all devices for divers to log their dives on the go.
+* The web application should have a navigation bar that is self explanitory.
+* Logging a dive should be as straight forward and quick as possible.
+* Reviewing logged dives should be simple and easy with clear viewing.
+* Logging in and out should be straight forward and easy to do.
+* Viewing club logs should be possible seperately from personal logs so that the diving officer can have one account.
+* The application should be easy to use and require as few clicks as possible to log a dive quickly after returing from the water.
 
 ### **Structural planning**
 
@@ -141,7 +142,7 @@ This page should not be avalible to users who are not logged in.
 
 This page should contain the same theme as the other pages.
 This page should provide the diving officer with the options to view the club logs or to view the club members.
-The club logs hsould contain every dive logged by members of this club with their username visible.
+The club logs should contain every dive logged by members of this club with their username visible.
 The members section should show all members in the club.
 This page should not be avalible to users who are not logged in and to members who do not have staff status.
 
@@ -206,8 +207,8 @@ The colors eventually selected for use were;
 
 The font selected was based on what was clear and easy to read as well as feeling like it was suited for a diving-based theme.
 The fonts chosen was;
-	-Ubuntu
-	-Sans-Serif
+* Ubuntu
+* Sans-Serif
 The focus of this font being to provide the information in a non-distracting manner that was viable for the visually impaired user or someone trying to use the site on a mobile device.
 
 ------------------------------------------------------------------
@@ -222,7 +223,7 @@ The focus of this font being to provide the information in a non-distracting man
 
 **Title:**
 
-The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation. It is the largest tect on screen and populates from base_generic.html across all pages of the application.
+The title of the application "My Dive Log" is a link to return the user to the home page of the application, allowing for easier navigation. It is the largest text on screen and populates from base_generic.html across all pages of the application.
 
 **Login/Logout/Register:**
 
@@ -294,13 +295,13 @@ The diving officer home page gives the diving officer access to the members who 
 
 **Club Logs:**
 
-This page is very similar to the personal logs page. It displays the dives logged by all divers. Their username is present to indicate who logged each dive. Dives are in order of most recent first. Had this been a project i had more time on, i would have developed a function to filter these results. At the bottom of the log there is a button to return the user to the diving officer home page
+This page is very similar to the personal logs page. It displays the dives logged by all divers. Their username is present to indicate who logged each dive. Dives are in order of most recent first. Had this been a project i had more time on, i would have developed a function to filter these results. At the bottom of the log there is a button to return the user to the diving officer home page.
 
 ![club_logpage.html](log/static/images/clublog.jpg)
 
 **Members:**
 
-This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email. There is also a button at the bottom of the page to allow the user to return to the diving officer home page. Had i had more time i would have developed a way for the user to delete and edit divers details.
+This page has the same card theme as the log page. It contains a list of the users username, first name, last name and email. There is also a button at the bottom of the page to allow the user to return to the diving officer home page. Had i had more time i would have developed a way for the user to delete and edit divers details, for now this must be done through admin.
 
 ![club_members.html](log/static/images/members.jpg)
 
@@ -395,9 +396,6 @@ The languages used in this project were;
 * GitHub Projects Board **[Projects Board](https://github.com/users/lisa-butler/projects/3)**
 
 
-
-
-
 ------------------------------------------------------------------
 
 ## Troubleshooting and testing
@@ -408,6 +406,7 @@ The languages used in this project were;
 
 Troubleshooting was quite varied on this project as it involved quite a wide range of different technologies. Initially the biggest issue i ran into was with settign up the authentication and registration system. I spent quite a few weeks trying to get allauth to work before abandoning it in favour of django contrib auth, something that had much more extensive documentation avalible for it and was ultimately much simpler to use.
 I opened a new branch to attempt this new authentication system on and when i merged the branches, later on, it took some time to work through the merge conflicts, remove unneeded duplicates, folders and code.
+When turning debug to False i encountered an error on my live site, in that it was not loading static files. This was solved by adding a STATIC_ROOT to the settings.py file.
 There were countless other small errors solved throughout the development of this application.
 Troubleshooting was managed using dev tools, printing to terminal and utilising a lot of googling.
 
@@ -678,14 +677,14 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ### **Credits:**
 
 * Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/).
-* It was also take from the Code Institutes walkthrough projcts "Hello Django" and course content.
+* Ideas were taken from the Code Institutes walkthrough projcts "Hello Django" and course content.
 * Design ideas were taken from Bootstrap (https://getbootstrap.com/) as well as general web searches using Google.
 
 
 ### **Acknowledgements:**
 
 * My program coordinator Kasia for contiuned support and advice throughout.
-* My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
+* My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin-senior dev at Overstock Ireland) for their advice and patience.
 * My mentor Tim Nelson for going above and beyond to ensure i was presenting my best work and that i understood each concept we discussed.
 
 ------------------------------------------------------------------
@@ -695,5 +694,4 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 <a name="content"></a>
 
 * All content was written by the developer as part of an academic exercise for the Code Institute.
-
-
+* All images used are owned by the developer or permission has been granted for their usage.
