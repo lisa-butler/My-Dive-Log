@@ -72,6 +72,18 @@ I want to be able to log and review my own dives as a diver.
 I want to be able to view all dives logged by members in my club.
 I want to be able to view all of my club members.
 
+These were added into the Issues section on Github for effective project planning and moved on the projects board as i progressed through them.
+
+ ![Issues](log/static/images/issues.jpg)
+
+GitHub Issue Tracker **[Issues](https://github.com/lisa-butler/My-Dive-Log/issues?q=is%3Aissue+is%3Aclosed)**
+
+![Projects](log/static/images/projects.jpg)
+
+GitHub Projects Board **[Projects Board](https://github.com/users/lisa-butler/projects/3)**
+
+
+
 **Scope:**
 
 The web application should have a clear and consistent layout including navigation and login, logout functionality.
@@ -375,6 +387,15 @@ The languages used in this project were;
 * sqlparse
 
 
+### **Other Technologies Used:**
+
+* GitHub Issue Tracker **[Issues](https://github.com/lisa-butler/My-Dive-Log/issues?q=is%3Aissue+is%3Aclosed)**
+
+* GitHub Projects Board **[Projects Board](https://github.com/users/lisa-butler/projects/3)**
+
+
+
+
 
 ------------------------------------------------------------------
 
@@ -561,11 +582,13 @@ Testing other elements:
 **Unit Testing:**
 
 This was done using pythons 'unittest' module that is part of the standard python library.
-Tests were done on the form elements of this application.
+Tests were done on the form elements of this application, see code below;
 
-![Diving officer navigation options](log/static/images/usdoaccess.jpg)
+![Tests done on form elements ](log/static/images/test_forms.jpg)
 
-![Diving officer navigation options](log/static/images/usdoaccess.jpg)
+These tests were all checked and passing;
+
+![Unit tests passing](log/static/images/unittests.jpg)
 
 
 
